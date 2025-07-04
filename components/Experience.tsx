@@ -197,12 +197,22 @@ import { Calendar, MapPin, ExternalLink, Briefcase } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const experiences = [
+   {
+    title: 'SDE Intern',
+    company: 'UIDAI',
+    location: 'Delhi, India',
+    period: 'July 2025 - Present',
+    type: 'Current',
+    description: 'Contributing to the UIDAI Aadhaar Portal by building secure full-stack features for enrolment, updates, and authentication, improving APIs, UI, and database integration to enhance user experience and ensure government compliance.',
+    technologies: ['React', 'Next.js', 'Node.js', 'MongoDB', 'Express.js','Typescript','API Testing','Devops'],
+    color: 'primary'
+  },
   {
     title: 'Full Stack Developer Intern',
     company: 'Desire4Travels',
     location: 'Remote',
-    period: 'May 2024 - Present',
-    type: 'Current',
+    period: 'May 2025 - June 2025',
+    type: 'Completed',
     description: 'Contributing to the development of the company\'s travel and tour website and building a separate website for travel agents and booking platforms.',
     technologies: ['React', 'Next.js', 'Node.js', 'MongoDB', 'Express.js'],
     link: 'https://desire4travels.com/',
