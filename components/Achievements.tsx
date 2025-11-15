@@ -6,39 +6,120 @@ import { Trophy, Medal, Award, Star, Users, Code, Target, Zap } from 'lucide-rea
 
 const achievements = [
   {
-    title: 'CodeClash 2025 Semi-Finalists',
+    title: 'LeetCode 382+ Problems',
+    category: 'Programming',
+    icon: Code, // Assumed icon
+    color: 'primary',
+    description: 'Solved 382+ problems on LeetCode (mukul1010).',
+    date: 'Ongoing',
+    level: 'Global'
+  },
+  {
+    title: 'CodeChef 3 Star',
+    category: 'Programming',
+    icon: Star, // Assumed icon
+    color: 'secondary',
+    description: 'Achieved 3 Star (1600+ rating) on CodeChef (mukul1010).',
+    date: 'Ongoing',
+    level: 'Global'
+  },
+  {
+    title: 'CodeForces 1081 Rating',
+    category: 'Programming',
+    icon: Trophy, // Assumed icon
+    color: 'accent',
+    description: 'Pupil rating (1081) on CodeForces (muku0784).',
+    date: 'Ongoing',
+    level: 'Global'
+  },
+  {
+    title: 'Web3 Mentor, GDG MAIT',
+    category: 'Activity',
+    icon: Users, // Assumed icon
+    color: 'primary',
+    description: 'Mentoring students in Web3 technologies for Google Developer Group MAIT.',
+    date: '2025',
+    level: 'College'
+  },
+  {
+    title: 'Webvision Winner 2025',
+    category: 'Competition',
+    icon: Award, // Assumed icon
+    color: 'secondary',
+    description: 'Secured first place in the Webvision 2025 competition.',
+    date: '2025',
+    level: 'Inter-College' // Assumed level
+  },
+  {
+    title: 'Smart India Hackathon 2025',
+    category: 'Hackathon',
+    icon: Code,
+    color: 'accent',
+    description: 'Currently participating in the final rounds of Smart India Hackathon 2025.',
+    date: '2025',
+    level: 'National'
+  },
+  {
+    title: 'Top 8 - CodeSynthesis 2025',
+    category: 'Competition',
+    icon: Trophy,
+    color: 'primary',
+    description: 'Ranked in the Top 8 teams at CodeSynthesis 2025.',
+    date: '2025',
+    level: 'National' // Assumed level
+  },
+  {
+    title: 'Finalist - DevExpo NSUT 2025',
+    category: 'Hackathon',
+    icon: Zap, // Assumed icon
+    color: 'secondary',
+    description: 'Reached the finals of the DevExpo Hackathon at NSUT 2025.',
+    date: '2025',
+    level: 'Inter-College' // Assumed level
+  },
+  {
+    title: 'Finalist - Hackground India 2025',
+    category: 'Hackathon',
+    icon: Target, // Assumed icon
+    color: 'accent',
+    description: 'Qualified as a finalist in the Hackground India 2025 hackathon.',
+    date: '2025',
+    level: 'National'
+  },
+  {
+    title: 'CodeClash 2025 Semi-Finalist',
     category: 'Competition',
     icon: Trophy,
     color: 'primary',
     description: 'Reached semi-finals in the prestigious CodeClash 2025 competitive programming contest.',
     date: '2025',
-    level: 'National'
+    level: 'National' // Assumed level
   },
   {
-    title: 'SIH 2024 - Round 1 Cleared',
-    category: 'Hackathon',
+    title: 'SSOC 2025 Contributor',
+    category: 'Open Source',
     icon: Code,
     color: 'secondary',
-    description: 'Successfully cleared the first round of Smart India Hackathon 2024, competing with thousands of teams.',
-    date: '2024',
-    level: 'National'
-  },
-  {
-    title: 'Codegenis Ideathon 2025 - Round 2',
-    category: 'Innovation',
-    icon: Target,
-    color: 'accent',
-    description: 'Advanced to the second round of Codegenis Ideathon 2025 with innovative project idea.',
+    description: 'Contributed to open-source projects during Social Summer of Code 2025.',
     date: '2025',
-    level: 'Inter-College'
+    level: 'Global'
   },
   {
-    title: 'Branch Rank 8th (4th Semester)',
+    title: 'GSSOC 2025 Contributor',
+    category: 'Open Source',
+    icon: Code,
+    color: 'accent',
+    description: 'Contributed to open-source projects during GirlScript Summer of Code 2025.',
+    date: '2025',
+    level: 'Global'
+  },
+  {
+    title: 'Branch Rank 14th (4th Semester)',
     category: 'Academic',
     icon: Medal,
     color: 'primary',
-    description: 'Achieved 8th rank in Computer Science branch with 9.355 CGPA till 4th semester.',
-    date: '2024',
+    description: 'Achieved 14th rank in Computer Science branch with 9.284 CGPA till 4th semester.', // CGPA updated to match resume
+    date: '2025',
     level: 'College'
   },
   {
@@ -49,60 +130,6 @@ const achievements = [
     description: 'Secured 7th rank in school with 92.6% marks in CBSE Class 12th examination.',
     date: '2022',
     level: 'School'
-  },
-  {
-    title: 'Top 5 - TechSquid Competition',
-    category: 'Competition',
-    icon: Zap,
-    color: 'accent',
-    description: 'Finished in top 5 positions in the TechSquid technical competition.',
-    date: '2024',
-    level: 'Regional'
-  },
-  {
-    title: 'Top 8 - Be SDE Ready 1.0',
-    category: 'Competition',
-    icon: Code,
-    color: 'primary',
-    description: 'Secured top 8 position in the Be SDE Ready 1.0 software development competition.',
-    date: '2024',
-    level: 'National'
-  },
-  {
-    title: 'Build with India Hackathon',
-    category: 'Hackathon',
-    icon: Users,
-    color: 'secondary',
-    description: 'Ranked under top 5000 participants in the Build with India Hackathon.',
-    date: '2024',
-    level: 'National'
-  },
-  {
-    title: 'GDG on Campus Solution Challenge',
-    category: 'Challenge',
-    icon: Award,
-    color: 'accent',
-    description: 'Participated in Google Developer Groups on Campus Solution Challenge.',
-    date: '2024',
-    level: 'Global'
-  },
-  {
-    title: 'BuildWars - Top 88 Teams',
-    category: 'Competition',
-    icon: Trophy,
-    color: 'primary',
-    description: 'Team ranked among top 88 teams in the BuildWars development competition.',
-    date: '2024',
-    level: 'National'
-  },
-  {
-    title: 'DSA Xtreme Battle',
-    category: 'Programming',
-    icon: Code,
-    color: 'secondary',
-    description: 'Excelled in the DSA Xtreme Battle competitive programming contest.',
-    date: '2024',
-    level: 'Inter-College'
   }
 ];
 

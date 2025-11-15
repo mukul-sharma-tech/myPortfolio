@@ -14,8 +14,10 @@ export default function About() {
   const stats = [
     { label: 'CGPA', value: '9.2+', icon: Star },
     { label: 'Branch Rank', value: '14th', icon: Trophy },
-    { label: 'LeetCode', value: '100+', icon: Target },
-    { label: 'CodeChef', value: '2⭐', icon: Star },
+    { label: 'LeetCode', value: '382+', icon: Target },
+    { label: 'CodeChef', value: '3⭐', icon: Star },
+    { label: 'Codeforces', value: '1081 Rating', icon: Star },
+
   ];
 
   return (
@@ -57,7 +59,7 @@ export default function About() {
                 </div>
               </div>
               <h3 className="text-2xl font-bold mb-2">Mukul Sharma</h3>
-              <p className="text-muted-foreground">Full Stack Developer & AI ML Enthusiast</p>
+              <p className="text-muted-foreground">Full Stack Developer, Research, Web3 and AI ML Enthusiast</p>
             </div>
 
             {/* Stats Grid */}
@@ -106,7 +108,7 @@ export default function About() {
                     </span>
                   </div>
                 </div>
-                
+
                 <div className="border-l-2 border-secondary/30 pl-4">
                   <h4 className="font-semibold">Class 12th - CBSE</h4>
                   <p className="text-secondary">Joseph & Mary Public School, Delhi</p>
@@ -132,17 +134,13 @@ export default function About() {
               </h3>
               <div className="space-y-4 text-muted-foreground">
                 <p>
-                  Currently pursuing excellence in Computer Science while maintaining a strong academic record. 
-                  Passionate about integrating AI/ML with full-stack development to create impactful, real-world solutions.
+                  High-achieving penultimate-year Computer Science undergraduate (9.2+ CGPA). I&apos;m passionate about building secure, innovative technology solutions by applying my expertise in distributed systems, AI/ML, and full-stack development.
                 </p>
                 <p>
-                  Active contributor to open source projects and currently participating in SSOC 2025. 
-                  Always eager to learn new technologies and solve complex problems through code.
+                  I am leveraging my experience building scalable, low-latency microservices for the national Aadhaar portal during my internship at UIDAI. My project work includes developing AI-powered platforms like AI-Hire, Switch, Sanskritam, Chakra, Circular Chain and EduniteX from scratch.
                 </p>
                 <p>
-                  <span className="text-accent font-semibold">Preparing for GATE 2026</span> while gaining practical 
-                  experience through internships and building innovative projects that showcase the power of modern web 
-                  technologies combined with artificial intelligence.
+                  Alongside my academics and <span className="text-accent font-semibold">preparing for GATE 2026</span>, I am an active open-source contributor (GSSOC 25, SSOC 25) and serve as the Web3 Mentor for GDG MAIT.
                 </p>
               </div>
             </div>
@@ -153,12 +151,13 @@ export default function About() {
                 Current Focus
               </h3>
               <div className="space-y-2 text-muted-foreground">
-                <p>• Full Stack Developer Intern at Desire4Travels</p>
-                <p>• Contributing to SSOC 2025 open source initiative</p>
-                <p>• Developing AI-powered educational solutions</p>
-                <p>• Building innovative web applications with modern tech stack</p>
+                <p>• Serving as Web3 Mentor at Google Developer Group MAIT</p>
+                <p>• Competing in the Smart India Hackathon (SIH) 2025</p>
+                <p>• Preparing for the GATE 2026 examination</p>
+                <p>• Actively solving DSA and CP problems (LeetCode, CodeChef, CodeForces)</p>
+                <p>• Researching about different topics and ideas.</p>
               </div>
-            </div>
+            </div>         
           </motion.div>
         </div>
       </div>

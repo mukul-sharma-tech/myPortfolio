@@ -17,14 +17,14 @@ export type Project = {
 const projects: Project[] = [
   {
     id: 1,
-    title: 'AI-Hire: AI-Driven Interview Platform',
-    description: 'Advanced AI-powered video conferencing interview platform with 3D virtual interviewer, resume analysis, and real-time feedback system.',
-    longDescription: 'AI-Hire revolutionizes the interview process with cutting-edge AI technology. Features include real-time speech analysis, facial expression recognition, 3D AR interviewer, resume-job matching algorithms, and comprehensive scoring system.',
-    technologies: ['React', 'Next.js', 'Three.js', 'OpenAI', 'TensorFlow', 'Computer Vision', 'NLP'],
+    title: 'AI-Hire',
+    description: 'Smart 3D Interview Platform',
+    longDescription: 'Handled an ambiguous, broadly defined problem by conceiving, designing, and building an innovative AI-powered platform from scratch.\nIntegrated Generative AI for ATS checker, job preparation tools and subscriptions; received positive user feedback.',
+    technologies: ['Next.js', 'TypeScript', 'AI/ML', 'AR/VR'],    
     category: 'AI',
     complexity: 'High',
-    liveUrl: 'https://ai-hire-tau.vercel.app/',
-    githubUrl: 'https://github.com/mukul-sharma-tech/AIHire',
+    liveUrl: 'https://ai-hire-platform.vercel.app/',
+    githubUrl: 'https://github.com/mukul-sharma-tech/AI-Hire',
     featured: true,
     status: 'In Development',
     priority: 1,
@@ -32,14 +32,14 @@ const projects: Project[] = [
   },
   {
     id: 2,
-    title: 'EduAssist: Smart Learning Assistant',
+    title: 'EduniteX',
     description: 'AI-powered educational platform with personalized learning, 3D avatar teacher, voice interaction, and real-time student emotion tracking.',
-    longDescription: 'EduAssist transforms classroom learning with AI technology. Features speech recognition, facial emotion analysis, personalized quiz generation, 3D avatar interactions, and comprehensive student performance analytics.',
+    longDescription: 'EduniteX transforms classroom learning with AI technology. Features speech recognition, facial emotion analysis, personalized quiz generation, 3D avatar interactions, and comprehensive student performance analytics.',
     technologies: ['Python', 'TensorFlow', 'OpenCV', 'React', 'NLP', 'Computer Vision', 'Speech Recognition'],
     category: 'AI',
     complexity: 'High',
-    liveUrl: 'https://edu-assist-alpha.vercel.app/',
-    githubUrl: 'https://github.com/mukul-sharma-tech/EduAssist',
+    liveUrl: 'https://edunite-x.vercel.app/',
+    githubUrl: 'https://github.com/mukul-sharma-tech/EduniteX',
     featured: true,
     status: 'Completed',
     priority: 2,
@@ -47,70 +47,97 @@ const projects: Project[] = [
   },
   {
     id: 3,
+    title: 'Sanskritam',
+    description: 'Programming Language & Web-Based IDE',
+    longDescription: 'Designed the core compiler, parser, and rules for a complete Sanskrit-based programming language.\nDeveloped a responsive React IDE with an integrated GenAI assistant to translate natural language problems into executable code.',
+    technologies: ['React', 'TypeScript', 'Python', 'C++', 'Compiler Design'],
+    category: 'Core CS',
+    complexity: 'High',
+    liveUrl: 'https://sanskritam.vercel.app/', // Add your Live Demo URL
+    githubUrl: 'https://github.com/mukul-sharma-tech/Sanskritam', // Add your GitHub URL
+    featured: true,
+    status: 'Completed',
+    priority: 3,
+    image: 'https://plus.unsplash.com/premium_photo-1678197251586-6f54bae38803?q=80&w=1147&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' // Update with your image path
+  },
+  {
+    id: 4,
+    title: 'Chakra',
+    description: 'A Novel Data Structure',
+    longDescription: 'Built Chakra, an orbit-based data structure for dynamic sorting and efficient data operations.\nInspired by atomic orbits and the Sudarshan Chakra for a balanced, scalable design.',
+    technologies: ['C++'],
+    category: 'Core CS',
+    complexity: 'Medium',
+    liveUrl: 'https://docs.google.com/document/d/176ZmPq2s5GWSt0NOulHgQHkVoSssR-BR54sWMfB6apI/edit?tab=t.0', // Add your Docs URL
+    githubUrl: 'https://github.com/mukul-sharma-tech/Chakra', // Add your GitHub URL
+    featured: false,
+    status: 'Completed',
+    priority: 4,
+    image: 'https://i.pinimg.com/1200x/da/8a/c2/da8ac29a4c11bf076a251b46a8cdb0bc.jpg' // Update with your image path
+  },
+  {
+    id: 5,
+    title: 'CircularChain',
+    description: 'Blockchain Marketplace for Industrial Byproducts',
+    longDescription: 'Blockchain-powered marketplace where smart contracts ensure trust, payments, and sustainability in trading industrial byproducts.',
+    technologies: ['Blockchain', 'Next.js', 'Solidity', 'SepoliaETH'],
+    category: 'Web3',
+    complexity: 'Medium',
+    liveUrl: '#', // Add your Live Demo URL
+    githubUrl: '#', // Add your GitHub URL
+    featured: false,
+    status: 'Completed',
+    priority: 5,
+    image: 'https://i.pinimg.com/736x/d1/31/fd/d131fde9be28706341d11597d746df2a.jpg' // Update with your image path
+  },
+
+  {
+    id: 6,
     title: 'Switch: Gender-Safe Social Platform',
     description: 'Revolutionary social media platform with gender-safe spaces, interest-based feeds, and AI-powered content moderation.',
     longDescription: 'Switch creates a safer social media experience with dedicated spaces for different genders, AI-based content filtering, interest-driven feeds, mental health support, and anti-addiction features.',
     technologies: ['React', 'Next.js', 'MongoDB', 'Socket.io', 'AI Moderation', 'Real-time Chat'],
     category: 'Web',
     complexity: 'High',
-    liveUrl: 'https://switch-peach.vercel.app/',
-    githubUrl: 'https://github.com/mukul-sharma-tech/Switch',
-    featured: true,
+    liveUrl: 'https://the-switch-app.vercel.app/',
+    githubUrl: 'https://github.com/mukul-sharma-tech/The_Switch',
+    featured: false,
     status: 'In Development',
-    priority: 3,
+    priority: 6,
     image: '/images/switch.png'
   },
   {
-    id: 4,
-    title: 'FarmerAssist: Smart Farming Dashboard',
-    description: 'Comprehensive farming solution with weather integration, crop management, and data-driven agricultural insights.',
-    longDescription: 'FarmerAssist empowers farmers with modern technology including real-time weather data, crop health monitoring, irrigation scheduling, and market price tracking.',
-    technologies: ['React', 'Node.js', 'Weather API', 'MongoDB', 'Chart.js', 'Express.js'],
-    category: 'Web',
+    id: 7,
+    title: 'LegalMate',
+    description: 'AI-Powered Legal Document Analyzer',
+    longDescription: 'Designed a secure, AI-powered platform to democratize legal understanding by translating "legalese" into simple, actionable information.\nImplements a "Plain English" summary generator, a key clause highlighter for risks/obligations, and an interactive Q&A chat.\nEmpowers individuals, tenants, and freelancers to analyze complex legal documents.',
+    technologies: ['AI/ML', 'Next.js', 'TypeScript'],
+    category: 'AI',
     complexity: 'Medium',
-    liveUrl: 'https://farmer-dr37.onrender.com/',
-    githubUrl: '#',
+    liveUrl: 'https://legal-mate-ai.vercel.app/', // Add your Live Demo URL
+    githubUrl: 'https://github.com/mukul-sharma-tech/LegalMate', // Add your GitHub URL
     featured: false,
     status: 'Completed',
-    priority: 4,
-    // image: '/images/farmerassist.png'
-    image: 'https://plus.unsplash.com/premium_photo-1661420226112-311050ce30da?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+    priority: 7,
+    image: 'https://i.pinimg.com/1200x/a7/5b/cc/a75bcc88195339696dbb2808f28371d9.jpg' // Update with your image path
   },
   {
-    id: 5,
-    title: 'AI Interview Calling Platform',
-    description: 'Advanced AI-powered interview platform with resume analysis and candidate screening capabilities.',
-    longDescription: 'Comprehensive interview solution featuring AI-driven candidate assessment, resume parsing, and automated screening processes.',
-    technologies: ['AI/ML', 'React', 'Resume Analysis', 'Video Calling'],
+    id: 8, // New ID
+    title: 'Digital Lessons Generator',
+    description: 'AI-powered platform for real-time lesson creation',
+    longDescription: 'Engineered a dynamic content platform using Generative AI to create interactive lesson components (e.g., quizzes, code blocks) in real-time.\nIntegrated a react-live sandbox to compile and validate generated TypeScript and React code, ensuring all dynamic UI is error-free before rendering.\nThis project demonstrates building scalable, intuitive user interfaces by combining AI-generated content with a secure, sandboxed frontend environment.',
+    technologies: ['Generative AI', 'React', 'TypeScript', 'react-live'],
     category: 'AI',
     complexity: 'High',
-    liveUrl: 'https://ai-hiring-beta.vercel.app/',
-    githubUrl: '#',
+    liveUrl: 'https://digital-lessons-generator.vercel.app/', // Add your Live Demo URL
+    githubUrl: 'https://github.com/mukul-sharma-tech/Digital-Lessons-Generator', // Add your GitHub URL
     featured: false,
     status: 'Completed',
-    priority: 5,
-    // image: '/images/ai-interview-call.png'
-    image: 'https://images.unsplash.com/photo-1573497620053-ea5300f94f21?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-
+    priority: 8,
+    image: 'https://i.pinimg.com/1200x/f4/cf/89/f4cf89aeb8463ad2f99c131cf18c2a2d.jpg' // Update with your image path
   },
   {
-    id: 6,
-    title: 'ApnaTour: Travel Planner',
-    description: 'Comprehensive travel planning platform with itinerary generation, booking integration, and personalized recommendations.',
-    longDescription: 'Full-featured travel planning application with destination discovery, itinerary creation, budget tracking, and integrated booking services.',
-    technologies: ['React', 'Next.js', 'MongoDB', 'Travel APIs', 'Payment Integration'],
-    category: 'Web',
-    complexity: 'Medium',
-    liveUrl: 'https://apna-tour.vercel.app/',
-    githubUrl: '#',
-    featured: false,
-    status: 'Completed',
-    priority: 6,
-    // image: '/images/apnatour.png'
-    image: 'https://images.unsplash.com/photo-1530789253388-582c481c54b0?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-  },
-  {
-    id: 7,
+    id: 9,
     title: 'HandPilot: Gesture Controller',
     description: 'Computer vision-based hand gesture recognition system for contactless cursor control using machine learning.',
     longDescription: 'HandPilot enables hands-free computer interaction through advanced computer vision and machine learning algorithms for precise gesture recognition and cursor control.',
@@ -121,12 +148,42 @@ const projects: Project[] = [
     githubUrl: 'https://github.com/mukul-sharma-tech/HandPilot',
     featured: false,
     status: 'Completed',
-    priority: 7,
+    priority: 9,
     // image: '/images/handpilot.png'
     image: 'https://plus.unsplash.com/premium_photo-1711664260521-8abe21e1eace?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
   },
   {
-    id: 8,
+    id: 10,
+    title: 'AstroGuard',
+    description: 'Asteroid Impact Simulation & Visualization Tool',
+    longDescription: 'Developed an interactive platform integrating NASA and USGS datasets to model near-Earth asteroid impact scenarios.\nBuilt features for simulating impact consequences, visualizing affected regions, and evaluating mitigation strategies.\nRendered interactive 3D asteroid trajectories using Three.js.',
+    technologies: ['Next.js', 'TypeScript', 'Three.js', 'NASA APIs', 'USGS APIs'],
+    category: 'Web',
+    complexity: 'High',
+    liveUrl: 'https://astro-guard-meteor.vercel.app/',
+    githubUrl: 'https://github.com/mukul-sharma-tech/AstroGuard_Meteor', // Add your GitHub URL
+    featured: false,
+    status: 'Completed',
+    priority: 10,
+    image: 'https://i.pinimg.com/736x/97/d2/08/97d208b707b1991536595d40efa56bfe.jpg' // Update with your image path
+  },
+    {
+    id: 11,
+    title: 'Astro-Cadet Academy',
+    description: '100% Offline-First Educational Game',
+    longDescription: 'Built a 100% offline-first educational game (using a Service Worker) to teach space science without an internet connection.\nDeveloped a dual-game system: "Astro-Sort" (logic puzzle) and "Cosmic Burst" (reflex game).\nEngineered from scratch with zero dependencies, using localStorage for high scores.',
+    technologies: ['Vanilla JavaScript', 'Service Worker', 'HTML5', 'CSS3', 'JSON'],
+    category: 'Web',
+    complexity: 'Medium',
+    liveUrl: 'https://astro-cadet-academy.vercel.app/', // Add your Live Demo URL
+    githubUrl: 'https://github.com/mukul-sharma-tech/astro-cadet-academy', // Add your GitHub URL
+    featured: false,
+    status: 'Completed',
+    priority: 11,
+    image: 'https://i.pinimg.com/736x/0a/fd/74/0afd74d5ed31747ba3cd827353b600e3.jpg' // Update with your image path
+  },
+  {
+    id: 12,
     title: 'Bhagavad Geeta AI Chatbot',
     description: 'NLP-powered chatbot providing spiritual guidance and answering questions based on Bhagavad Geeta teachings.',
     longDescription: 'An intelligent chatbot that uses natural language processing to understand user queries and provide relevant spiritual guidance from the Bhagavad Geeta scriptures.',
@@ -137,12 +194,12 @@ const projects: Project[] = [
     githubUrl: '#',
     featured: false,
     status: 'Completed',
-    priority: 8,
+    priority: 12,
     // image: '/images/geetabot.png',
     image: 'https://shubhmandir.com/wp-content/uploads/2020/03/chapter-1-bhagwat-gita.jpg'
   },
   {
-    id: 9,
+    id: 13,
     title: 'Wind Power Forecasting',
     description: 'Machine learning model for predicting wind power generation using historical weather data and advanced algorithms.',
     longDescription: 'Advanced ML system for accurate wind power generation forecasting using ensemble methods, time series analysis, and weather pattern recognition.',
@@ -153,13 +210,13 @@ const projects: Project[] = [
     githubUrl: 'https://github.com/mukul-sharma-tech/FinalSubmission_Wind_Power_Generation_Forecasting',
     featured: false,
     status: 'Completed',
-    priority: 9,
+    priority: 13,
     // image: '/images/windpower.png',
     image: 'https://images.unsplash.com/photo-1508791290064-c27cc1ef7a9a?q=80&w=1174&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
 
   },
   {
-    id: 10,
+    id: 14,
     title: 'Harry Potter Invisible Cloak',
     description: 'Computer vision project using Python and OpenCV to create an invisible cloak effect like in Harry Potter movies.',
     longDescription: 'Innovative computer vision application that creates a real-time invisible cloak effect using background subtraction and color detection techniques.',
@@ -170,114 +227,13 @@ const projects: Project[] = [
     githubUrl: 'https://github.com/mukul-sharma-tech/harry-potter-invisible-cloak',
     featured: false,
     status: 'Completed',
-    priority: 10,
+    priority: 14,
     // image: '/images/invisible-cloak.png'
     image: 'https://c.ndtvimg.com/2024-12/9bkf4c6g_invisible-_625x300_06_December_24.jpg?im=FeatureCrop,algorithm=dnn,width=1200,height=738'
 
   },
   {
-    id: 11,
-    title: 'Beautiful Home Page with Assistant',
-    description: 'Modern homepage design with integrated AI assistant for enhanced user interaction and support.',
-    longDescription: 'Elegant homepage featuring a built-in AI assistant that provides real-time help and guidance to users navigating the website.',
-    technologies: ['React', 'Next.js', 'AI Integration', 'Modern UI/UX'],
-    category: 'Web',
-    complexity: 'Medium',
-    liveUrl: 'https://credex-assignment-lime.vercel.app/',
-    githubUrl: '#',
-    featured: false,
-    status: 'Completed',
-    priority: 11,
-    image: 'https://images.unsplash.com/photo-1642132652860-471b4228023e?q=80&w=1460&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-    // image: '/images/windpower.png'
-
-  },
-  {
-    id: 12,
-    title: 'Real Time Tic Tac Toe Game',
-    description: 'Interactive multiplayer Tic Tac Toe game with real-time gameplay and modern UI design.',
-    longDescription: 'Engaging real-time multiplayer Tic Tac Toe game featuring smooth animations, responsive design, and instant gameplay updates.',
-    technologies: ['React', 'Socket.io', 'Real-time Gaming', 'JavaScript'],
-    category: 'Web',
-    complexity: 'Low',
-    liveUrl: 'https://tic-tac-toe-chi-eight-29.vercel.app/',
-    githubUrl: '#',
-    featured: false,
-    status: 'Completed',
-    priority: 12,
-    // image: '/images/windpower.png'
-    image: 'https://images.unsplash.com/photo-1668901382969-8c73e450a1f5?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-  },
-  {
-    id: 13,
-    title: 'URL Shortener',
-    description: 'Fast and reliable URL shortening service with analytics and custom short links.',
-    longDescription: 'Comprehensive URL shortening platform with click analytics, custom aliases, and QR code generation for easy sharing.',
-    technologies: ['Node.js', 'Express.js', 'MongoDB', 'Analytics'],
-    category: 'Web',
-    complexity: 'Low',
-    liveUrl: 'https://url-shortener-gsbj.onrender.com',
-    githubUrl: '#',
-    featured: false,
-    status: 'Completed',
-    priority: 13,
-    image: 'https://plus.unsplash.com/premium_photo-1683865776032-07bf70b0add1?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-    // image: '/images/windpower.png'
-
-  },
-  {
-    id: 14,
-    title: 'Image Size Reducer',
-    description: 'Web-based tool for compressing and resizing images while maintaining quality.',
-    longDescription: 'Efficient image compression tool that reduces file sizes without compromising visual quality, supporting multiple formats.',
-    technologies: ['JavaScript', 'Canvas API', 'Image Processing', 'Web APIs'],
-    category: 'Web',
-    complexity: 'Low',
-    liveUrl: 'https://image-size-reduce-v9f2.onrender.com',
-    githubUrl: '#',
-    featured: false,
-    status: 'Completed',
-    priority: 14,
-    image: 'https://images.unsplash.com/photo-1747677490171-58f43fdb9cc0?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-    // image: '/images/windpower.png'
-
-  },
-  {
     id: 15,
-    title: 'Your AI Friend',
-    description: 'Conversational AI companion designed to provide friendly interactions and support.',
-    longDescription: 'Interactive AI chatbot that serves as a virtual friend, offering conversations, advice, and emotional support through natural language processing.',
-    technologies: ['AI/ML', 'NLP', 'Chatbot', 'Python'],
-    category: 'AI',
-    complexity: 'Medium',
-    liveUrl: 'https://aifriend-1.onrender.com',
-    githubUrl: '#',
-    featured: false,
-    status: 'Completed',
-    priority: 15,
-    image: 'https://images.unsplash.com/photo-1507146153580-69a1fe6d8aa1?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-    // image: '/images/windpower.png'
-
-  },
-  {
-    id: 16,
-    title: 'Real-Time Collaborative Editor',
-    description: 'Multi-user collaborative text editor with real-time synchronization and live cursor tracking.',
-    longDescription: 'Advanced collaborative editing platform enabling multiple users to edit documents simultaneously with real-time updates and conflict resolution.',
-    technologies: ['React', 'Socket.io', 'Real-time Sync', 'Collaborative Tools'],
-    category: 'Web',
-    complexity: 'High',
-    liveUrl: 'https://mukul-sharma-wasserstoff-front-end-intern-task-z3wj.vercel.app/',
-    githubUrl: '#',
-    featured: false,
-    status: 'Completed',
-    priority: 16,
-    image: 'https://images.unsplash.com/photo-1663662426323-7ba7aeb4f831?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-    // image: '/images/windpower.png'
-
-  },
-  {
-    id: 17,
     title: 'GitHub README File Generator',
     description: 'Automated tool for generating professional README files for GitHub repositories.',
     longDescription: 'Streamlined README generator that creates comprehensive documentation for GitHub projects with templates and customization options.',
@@ -288,7 +244,7 @@ const projects: Project[] = [
     githubUrl: 'https://github.com/mukul-sharma-tech/README_MAKER',
     featured: false,
     status: 'Completed',
-    priority: 17,
+    priority: 15,
     // image: '/images/readme-generator.png'
     image: 'https://camo.githubusercontent.com/cad0700fd2c820a742aac6fda7d758a0fd705d5b6360850693349b391203e260/68747470733a2f2f62756c6c646f676a6f622e636f6d2f73797374656d2f7265616461626c65732f636f766572732f3030302f3030312f3435352f6d61785f7265732f382d31302d323031382e706e67'
   },

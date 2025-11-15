@@ -21,6 +21,9 @@ const skillCategories = [
       { name: 'TypeScript', icon: FileCode },
       { name: 'Python', icon: FileCode },
       { name: 'Java', icon: FileCode },
+      { name: 'SQL', icon: FileCode }, // Added from resume
+      { name: 'Rust', icon: FileCode }, // Added from resume
+      { name: 'Solidity', icon: FileCode }, // Added from resume
     ]
   },
   {
@@ -32,26 +35,33 @@ const skillCategories = [
       { name: 'Next.js', icon: Layers },
       { name: 'Node.js', icon: Terminal },
       { name: 'Express.js', icon: Terminal },
+      { name: 'Python (Flask)', icon: Terminal }, // Matched resume "Python (Flask)"
+      { name: 'React Native', icon: Layers }, // Added from resume
       { name: 'HTML/CSS', icon: FileCode },
       { name: 'Tailwind CSS', icon: Layers },
       { name: 'Bootstrap', icon: Layers },
       { name: 'REST APIs', icon: Cloud },
-      { name: 'Flask API', icon: Terminal },
     ]
   },
   {
-    title: 'Database & Tools',
+    title: 'Databases & DevOps', // Renamed category for clarity
     icon: Database,
     color: 'accent',
     skills: [
-      { name: 'MongoDB', icon: Database },
-      { name: 'MySQL', icon: Database },
+      { name: 'MySQL', icon: Database }, // Re-ordered
+      { name: 'MongoDB', icon: Database }, // Re-ordered
+      { name: 'PostgreSQL', icon: Database }, // Added from resume
       { name: 'Firebase', icon: Database },
       { name: 'Supabase', icon: Database },
-      { name: 'Git/GitHub', icon: GitBranch },
+      { name: 'Prisma', icon: Database }, // Added from resume
+      { name: 'Git/Github', icon: GitBranch }, // Matched resume casing
+      { name: 'Docker', icon: Settings }, // Added from resume
+      { name: 'CI/CD', icon: Settings }, // Added from resume
+      { name: 'Linux', icon: Settings }, // Added from resume
+      { name: 'Jest', icon: Settings }, // Added from resume
       { name: 'VSCode', icon: Settings },
+      { name: 'Cursor', icon: Settings }, // Added from resume
       { name: 'Postman', icon: Settings },
-      { name: 'Jupyter', icon: Settings },
     ]
   },
   {
@@ -59,12 +69,11 @@ const skillCategories = [
     icon: Brain,
     color: 'primary',
     skills: [
-      { name: 'TensorFlow', icon: Brain },
-      { name: 'OpenCV', icon: Brain },
-      { name: 'NLP', icon: MessageSquare },
-      { name: 'Data Science', icon: Brain },
-      { name: 'Pandas', icon: Brain },
-      { name: 'Scikit-learn', icon: Brain },
+      { name: 'ML', icon: Brain }, // Replaced list with resume skills
+      { name: 'OpenAI', icon: Brain }, // Replaced list with resume skills
+      { name: 'LLMs', icon: MessageSquare }, // Replaced list with resume skills
+      { name: 'OpenCV', icon: Brain }, // From EduniteX project
+      { name: 'OpenVINO', icon: Brain }, // From EduniteX project
     ]
   },
   {
@@ -72,12 +81,11 @@ const skillCategories = [
     icon: Cpu,
     color: 'secondary',
     skills: [
-      { name: 'Data Structures', icon: Cpu },
-      { name: 'Algorithms', icon: Cpu },
-      { name: 'OOP', icon: Cpu },
-      { name: 'DBMS', icon: Database },
-      { name: 'System Design', icon: Cpu },
-      { name: 'Problem Solving', icon: Zap },
+      { name: 'DSA', icon: Cpu }, // Matched resume "DSA"
+      { name: 'System Design', icon: Cpu }, // Matched resume
+      { name: 'OOP', icon: Cpu }, // Matched resume
+      { name: 'Computer Networks', icon: Cpu }, // Added from resume
+      { name: 'DBMS', icon: Database }, // Kept (from resume coursework)
     ]
   },
   {
@@ -85,12 +93,14 @@ const skillCategories = [
     icon: Bot,
     color: 'accent',
     skills: [
+      // This list seems like specific examples of "Generative AI"
+      // which is on your resume. Leaving as-is.
+      { name: 'Generative AI', icon: Sparkles },
       { name: 'ChatGPT', icon: Bot },
       { name: 'Claude', icon: Bot },
       { name: 'Gemini', icon: Bot },
       { name: 'DeepSeek', icon: Bot },
       { name: 'Perplexity', icon: Bot },
-      { name: 'Generative AI', icon: Sparkles },
     ]
   }
 ];
