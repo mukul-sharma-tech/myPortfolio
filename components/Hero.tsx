@@ -58,10 +58,10 @@ export default function Hero() {
           <motion.p
             className="text-xl md:text-2xl text-muted-foreground mb-2"
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            animate={{ opacity: 1, y: 0 }} 
             transition={{ duration: 0.8, delay: 0.7 }}
           >
-            Full Stack Developer | AI/ML Enthusiast
+            Full Stack Developer | Generative AI
           </motion.p>
 
           <motion.p
@@ -82,7 +82,7 @@ export default function Hero() {
             <Button
               size="lg"
               className="glass-card glow hover:glow-secondary group"
-              onClick={() => window.open('https://drive.google.com/file/d/10IpYFbvdF6-3EDC803HQ1svr0YAXULIh/view?usp=sharing', '_blank')}
+              onClick={() => window.open('https://drive.google.com/drive/folders/1926GbTRYaKf08Hbd6aXOZyq0KKL5Vtwd?usp=sharing', '_blank')}
             >
               <Download className="mr-2 h-5 w-5 group-hover:animate-bounce" />
               Download Resume

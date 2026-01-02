@@ -48,6 +48,8 @@ const skillCategories = [
     icon: Database,
     color: 'accent',
     skills: [
+      { name: 'Azure', icon: Database }, // Re-ordered
+
       { name: 'MySQL', icon: Database }, // Re-ordered
       { name: 'MongoDB', icon: Database }, // Re-ordered
       { name: 'PostgreSQL', icon: Database }, // Added from resume
@@ -62,6 +64,7 @@ const skillCategories = [
       { name: 'VSCode', icon: Settings },
       { name: 'Cursor', icon: Settings }, // Added from resume
       { name: 'Postman', icon: Settings },
+
     ]
   },
   {

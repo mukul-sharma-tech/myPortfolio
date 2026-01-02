@@ -6,7 +6,7 @@ import { Trophy, Medal, Award, Star, Users, Code, Target, Zap } from 'lucide-rea
 
 const achievements = [
   {
-    title: 'LeetCode 382+ Problems',
+    title: 'LeetCode 435+ Problems',
     category: 'Programming',
     icon: Code, // Assumed icon
     color: 'primary',
@@ -41,6 +41,16 @@ const achievements = [
     date: '2025',
     level: 'College'
   },
+    {
+    title: 'Memory Over Models Hackathon Winner',
+    category: 'Competition',
+    icon: Award, // Assumed icon
+    color: 'secondary',
+    description: 'Under Top 20 Winners.',
+    date: '2025',
+    level: 'National' // Assumed level
+  },
+
   {
     title: 'Webvision Winner 2025',
     category: 'Competition',

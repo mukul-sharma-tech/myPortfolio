@@ -14,7 +14,7 @@ export default function About() {
   const stats = [
     { label: 'CGPA', value: '9.2+', icon: Star },
     { label: 'Branch Rank', value: '14th', icon: Trophy },
-    { label: 'LeetCode', value: '382+', icon: Target },
+    { label: 'LeetCode', value: '436+', icon: Target },
     { label: 'CodeChef', value: '3⭐', icon: Star },
     { label: 'Codeforces', value: '1081 Rating', icon: Star },
 
@@ -137,10 +137,10 @@ export default function About() {
                   High-achieving penultimate-year Computer Science undergraduate (9.2+ CGPA). I&apos;m passionate about building secure, innovative technology solutions by applying my expertise in distributed systems, AI/ML, and full-stack development.
                 </p>
                 <p>
-                  I am leveraging my experience building scalable, low-latency microservices for the national Aadhaar portal during my internship at UIDAI. My project work includes developing AI-powered platforms like AI-Hire, Switch, Sanskritam, Chakra, Circular Chain and EduniteX from scratch.
+                  I am leveraging my experience building scalable, low-latency microservices for the national Aadhaar portal during my internship at UIDAI. My project work includes developing platforms like Agento, AgenticIQ, AI-Hire, Switch, Sanskritam, Chakra, Circular Chain and EduniteX from scratch.
                 </p>
                 <p>
-                  Alongside my academics and <span className="text-accent font-semibold">preparing for GATE 2026</span>, I am an active open-source contributor (GSSOC 25, SSOC 25) and serve as the Web3 Mentor for GDG MAIT.
+                  Alongside my academics, I am an active open-source contributor (GSSOC 25, SSOC 25) and serve as the Web3 Mentor for GDG MAIT.
                 </p>
               </div>
             </div>
@@ -152,9 +152,9 @@ export default function About() {
               </h3>
               <div className="space-y-2 text-muted-foreground">
                 <p>• Serving as Web3 Mentor at Google Developer Group MAIT</p>
-                <p>• Competing in the Smart India Hackathon (SIH) 2025</p>
-                <p>• Preparing for the GATE 2026 examination</p>
+                {/* <p>• Preparing for the GATE 2026 examination</p> */}
                 <p>• Actively solving DSA and CP problems (LeetCode, CodeChef, CodeForces)</p>
+                <p>• Building and contributing to open-source projects</p>
                 <p>• Researching about different topics and ideas.</p>
               </div>
             </div>         

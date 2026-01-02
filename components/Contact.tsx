@@ -134,10 +134,10 @@ export default function Contact() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-6xl font-bold gradient-text mb-6">
-            Let's Connect
+            Let&apos;s Connect
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Ready to collaborate on exciting projects or discuss opportunities? I'd love to hear from you!
+            Ready to collaborate on exciting projects or discuss opportunities? I&apos;d love to hear from you!
           </p>
         </motion.div>
 
@@ -327,7 +327,7 @@ export default function Contact() {
           <h3 className="text-2xl font-bold mb-4">Ready to Build Something Amazing?</h3>
           <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
             Whether you have a project in mind, want to collaborate, or just want to connect, 
-            I'm always excited to discuss new opportunities and innovative ideas.
+            I&apos;m always excited to discuss new opportunities and innovative ideas.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
