@@ -82,7 +82,7 @@ export default function Hero() {
             <Button
               size="lg"
               className="glass-card glow hover:glow-secondary group"
-              onClick={() => window.open('https://drive.google.com/drive/folders/1926GbTRYaKf08Hbd6aXOZyq0KKL5Vtwd?usp=sharing', '_blank')}
+              onClick={() => window.open('https://drive.google.com/file/d/10IpYFbvdF6-3EDC803HQ1svr0YAXULIh/view?usp=sharing', '_blank')}
             >
               <Download className="mr-2 h-5 w-5 group-hover:animate-bounce" />
               Download Resume
