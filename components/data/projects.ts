@@ -23,8 +23,8 @@ const projects: Project[] = [
     technologies: ['Streamlit', 'Python', 'Azure', 'GenAI', 'RAG'],    
     category: 'AI',
     complexity: 'High',
-    liveUrl: 'https://agento-ai.streamlit.app/',
-    githubUrl: 'https://github.com/mukul-sharma-tech/Agento',
+    liveUrl: 'https://the-agento.vercel.app/',
+    githubUrl: 'https://github.com/mukul-sharma-tech/The-Agento',
     featured: true,
     status: 'Completed',
     priority: 1,
@@ -153,6 +153,111 @@ const projects: Project[] = [
   },
   {
     id: 10,
+    title: 'Knox Neural Shield',
+    description: 'AI Intrusion Detection System with real-time threat detection and LLM-powered automated response.',
+    longDescription: 'Developed a real-time AI intrusion detection system using an RF–Autoencoder ensemble on the UNSW-NB15 dataset for detecting DoS, zero-day attacks, and anomalies. Implemented SHAP-based explainability to highlight key malicious traffic features. Built an LLM-powered automated response system to generate readable security alerts and trigger network isolation upon threats.',
+    technologies: ['Python', 'SHAP', 'LLM', 'Scikit-learn', 'RF-Autoencoder'],
+    category: 'AI',
+    complexity: 'High',
+    liveUrl: 'https://knox-neural-shield.vercel.app/',
+    githubUrl: 'https://github.com/mukul-sharma-tech/Knox-Neural-Shield',
+    featured: false,
+    status: 'Completed',
+    priority: 10,
+    image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1170&auto=format&fit=crop'
+  },
+  {
+    id: 11,
+    title: 'Synapsee',
+    description: 'AI Market Validator with real-time analytics dashboard for instant startup validation.',
+    longDescription: 'Architected a comprehensive analytics dashboard visualizing real-time metrics (Google Trends, Competitor Pricing) and Safe Batch Size calculations using interactive charts. Engineered a modular report interface that aggregates multi-source insights (User Pain Points, Raw Material Feasibility) into actionable UI cards for instant startup validation.',
+    technologies: ['Next.js', 'MongoDB', 'TypeScript', 'Jina', 'Google Trends', 'AI/ML'],
+    category: 'AI',
+    complexity: 'High',
+    liveUrl: 'https://synapsee.vercel.app/',
+    githubUrl: 'https://github.com/mukul-sharma-tech/Synapsee',
+    featured: false,
+    status: 'Completed',
+    priority: 11,
+    image: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?q=80&w=1170&auto=format&fit=crop'
+  },
+  {
+    id: 12,
+    title: 'FluxMeter',
+    description: 'AI SEO Blog Engine that converts keywords into high-ranking SEO blogs via a multi-stage pipeline.',
+    longDescription: 'Built a scalable AI-powered blog engine converting keywords into high-ranking SEO blogs using a multi-stage pipeline with trend analysis, competitor scraping, and automated validation. Engineered a ~30s generation pipeline with retry logic, 7-dimension SEO scoring, and AI-driven improvement loops. Developed a full-stack system with real-time UI and AI chat editor, enabling live content editing, SERP gap analysis, and persistent analytics via Supabase.',
+    technologies: ['Next.js', 'Supabase', 'Node.js', 'AI/ML', 'Ollama', 'Groq'],
+    category: 'AI',
+    complexity: 'High',
+    liveUrl: 'https://fluxmeter.vercel.app/',
+    githubUrl: 'https://github.com/mukul-sharma-tech/FluxMeter',
+    featured: false,
+    status: 'Completed',
+    priority: 12,
+    image: 'https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?q=80&w=1174&auto=format&fit=crop'
+  },
+  {
+    id: 13,
+    title: 'QueryGenius',
+    description: 'GenAI platform that converts natural language questions into optimized MongoDB queries for government datasets.',
+    longDescription: 'Built a secure data analysis platform to help non-technical users understand large government datasets. Created a natural language system that converts English questions into optimized MongoDB queries. Used Ollama-based local LLMs and offline setup to ensure data privacy and zero external data leakage.',
+    technologies: ['GenAI', 'Machine Learning', 'MongoDB', 'Ollama', 'LLMs'],
+    category: 'AI',
+    complexity: 'High',
+    liveUrl: 'https://query-genius.vercel.app/',
+    githubUrl: 'https://github.com/mukul-sharma-tech/QueryGenius',
+    featured: false,
+    status: 'Completed',
+    priority: 13,
+    image: 'https://images.unsplash.com/photo-1518186285589-2f7649de83e0?q=80&w=1174&auto=format&fit=crop'
+  },
+  {
+    id: 14,
+    title: 'AI Gossip Hub',
+    description: 'Multi-Agent AI web platform where multiple LLM chatbots interact with each other via shared context.',
+    longDescription: 'Built a web platform with multiple AI chatbots that users can interact with separately. Implemented a shared context system so bots can talk to each other without user input. Tested how multi-AI systems can support basic analysis and coordination tasks.',
+    technologies: ['Multi-Agent AI', 'LLMs', 'Web App'],
+    category: 'AI',
+    complexity: 'Medium',
+    liveUrl: '#',
+    githubUrl: 'https://github.com/mukul-sharma-tech/AI-Gossip-Hub',
+    featured: false,
+    status: 'Completed',
+    priority: 14,
+    image: 'https://images.unsplash.com/photo-1677442135703-1787eea5ce01?q=80&w=1332&auto=format&fit=crop'
+  },
+  {
+    id: 15,
+    title: 'UlkaDrishti',
+    description: "Earth's Sentinel — interactive 3D asteroid orbit visualizer using real-time NASA Sentry data.",
+    longDescription: 'Built an interactive web app to visualize asteroid orbits and planetary defense scenarios using real-time NASA Sentry data. Implemented 3D simulations for impact prediction, crater estimation, and trajectory deflection using Three.js and WebGL. Developed a user-friendly platform to make space science concepts accessible to non-technical users. Built for NASA International Space Apps Challenge 2025.',
+    technologies: ['React', 'Three.js', 'WebGL', 'NASA APIs'],
+    category: 'Web',
+    complexity: 'High',
+    liveUrl: 'https://ulka-drishti.vercel.app/',
+    githubUrl: 'https://github.com/mukul-sharma-tech/UlkaDrishti',
+    featured: false,
+    status: 'Completed',
+    priority: 15,
+    image: 'https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?q=80&w=1172&auto=format&fit=crop'
+  },
+  {
+    id: 16,
+    title: 'GigFlow',
+    description: 'Full-featured gig economy platform with role-based dashboards, real-time chat, and escrow payments.',
+    longDescription: 'Built a full-featured gig economy platform with role-based dashboards for clients and freelancers. Developed real-time chat, proposal submission, contract management, and escrow payments using Next.js, Socket.io, and MongoDB. Designed a responsive, mobile-first UI with TailwindCSS and Framer Motion. Implemented secure authentication, email verification, and RBAC-based access control using NextAuth.js.',
+    technologies: ['Next.js', 'TypeScript', 'TailwindCSS', 'Socket.io', 'MongoDB', 'NextAuth.js'],
+    category: 'Web',
+    complexity: 'High',
+    liveUrl: 'https://gigflow.vercel.app/',
+    githubUrl: 'https://github.com/mukul-sharma-tech/GigFlow',
+    featured: false,
+    status: 'Completed',
+    priority: 16,
+    image: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=1170&auto=format&fit=crop'
+  },
+  {
+    id: 17,
     title: 'HandPilot: Gesture Controller',
     description: 'Computer vision-based hand gesture recognition system for contactless cursor control using machine learning.',
     longDescription: 'HandPilot enables hands-free computer interaction through advanced computer vision and machine learning algorithms for precise gesture recognition and cursor control.',
@@ -163,12 +268,11 @@ const projects: Project[] = [
     githubUrl: 'https://github.com/mukul-sharma-tech/HandPilot',
     featured: false,
     status: 'Completed',
-    priority: 10,
-    // image: '/images/handpilot.png'
+    priority: 17,
     image: 'https://plus.unsplash.com/premium_photo-1711664260521-8abe21e1eace?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
   },
   {
-    id: 11,
+    id: 18,
     title: 'AstroGuard',
     description: 'Asteroid Impact Simulation & Visualization Tool',
     longDescription: 'Developed an interactive platform integrating NASA and USGS datasets to model near-Earth asteroid impact scenarios.\nBuilt features for simulating impact consequences, visualizing affected regions, and evaluating mitigation strategies.\nRendered interactive 3D asteroid trajectories using Three.js.',
@@ -176,29 +280,29 @@ const projects: Project[] = [
     category: 'Web',
     complexity: 'High',
     liveUrl: 'https://astro-guard-meteor.vercel.app/',
-    githubUrl: 'https://github.com/mukul-sharma-tech/AstroGuard_Meteor', // Add your GitHub URL
+    githubUrl: 'https://github.com/mukul-sharma-tech/AstroGuard_Meteor',
     featured: false,
     status: 'Completed',
-    priority: 11,
-    image: 'https://i.pinimg.com/736x/97/d2/08/97d208b707b1991536595d40efa56bfe.jpg' // Update with your image path
+    priority: 18,
+    image: 'https://i.pinimg.com/736x/97/d2/08/97d208b707b1991536595d40efa56bfe.jpg'
   },
-    {
-    id: 12,
+  {
+    id: 19,
     title: 'Astro-Cadet Academy',
     description: '100% Offline-First Educational Game',
     longDescription: 'Built a 100% offline-first educational game (using a Service Worker) to teach space science without an internet connection.\nDeveloped a dual-game system: "Astro-Sort" (logic puzzle) and "Cosmic Burst" (reflex game).\nEngineered from scratch with zero dependencies, using localStorage for high scores.',
     technologies: ['Vanilla JavaScript', 'Service Worker', 'HTML5', 'CSS3', 'JSON'],
     category: 'Web',
     complexity: 'Medium',
-    liveUrl: 'https://astro-cadet-academy.vercel.app/', // Add your Live Demo URL
-    githubUrl: 'https://github.com/mukul-sharma-tech/astro-cadet-academy', // Add your GitHub URL
+    liveUrl: 'https://astro-cadet-academy.vercel.app/',
+    githubUrl: 'https://github.com/mukul-sharma-tech/astro-cadet-academy',
     featured: false,
     status: 'Completed',
-    priority: 12,
-    image: 'https://i.pinimg.com/736x/0a/fd/74/0afd74d5ed31747ba3cd827353b600e3.jpg' // Update with your image path
+    priority: 19,
+    image: 'https://i.pinimg.com/736x/0a/fd/74/0afd74d5ed31747ba3cd827353b600e3.jpg'
   },
   {
-    id: 13,
+    id: 20,
     title: 'Bhagavad Geeta AI Chatbot',
     description: 'NLP-powered chatbot providing spiritual guidance and answering questions based on Bhagavad Geeta teachings.',
     longDescription: 'An intelligent chatbot that uses natural language processing to understand user queries and provide relevant spiritual guidance from the Bhagavad Geeta scriptures.',
@@ -209,12 +313,11 @@ const projects: Project[] = [
     githubUrl: '#',
     featured: false,
     status: 'Completed',
-    priority: 13,
-    // image: '/images/geetabot.png',
+    priority: 20,
     image: 'https://shubhmandir.com/wp-content/uploads/2020/03/chapter-1-bhagwat-gita.jpg'
   },
   {
-    id: 14,
+    id: 21,
     title: 'Wind Power Forecasting',
     description: 'Machine learning model for predicting wind power generation using historical weather data and advanced algorithms.',
     longDescription: 'Advanced ML system for accurate wind power generation forecasting using ensemble methods, time series analysis, and weather pattern recognition.',
@@ -225,13 +328,11 @@ const projects: Project[] = [
     githubUrl: 'https://github.com/mukul-sharma-tech/FinalSubmission_Wind_Power_Generation_Forecasting',
     featured: false,
     status: 'Completed',
-    priority: 14,
-    // image: '/images/windpower.png',
+    priority: 21,
     image: 'https://images.unsplash.com/photo-1508791290064-c27cc1ef7a9a?q=80&w=1174&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-
   },
   {
-    id: 15,
+    id: 22,
     title: 'Harry Potter Invisible Cloak',
     description: 'Computer vision project using Python and OpenCV to create an invisible cloak effect like in Harry Potter movies.',
     longDescription: 'Innovative computer vision application that creates a real-time invisible cloak effect using background subtraction and color detection techniques.',
@@ -242,13 +343,11 @@ const projects: Project[] = [
     githubUrl: 'https://github.com/mukul-sharma-tech/harry-potter-invisible-cloak',
     featured: false,
     status: 'Completed',
-    priority: 15,
-    // image: '/images/invisible-cloak.png'
+    priority: 22,
     image: 'https://c.ndtvimg.com/2024-12/9bkf4c6g_invisible-_625x300_06_December_24.jpg?im=FeatureCrop,algorithm=dnn,width=1200,height=738'
-
   },
   {
-    id: 16,
+    id: 23,
     title: 'GitHub README File Generator',
     description: 'Automated tool for generating professional README files for GitHub repositories.',
     longDescription: 'Streamlined README generator that creates comprehensive documentation for GitHub projects with templates and customization options.',
@@ -259,9 +358,8 @@ const projects: Project[] = [
     githubUrl: 'https://github.com/mukul-sharma-tech/README_MAKER',
     featured: false,
     status: 'Completed',
-    priority: 16,
-    // image: '/images/readme-generator.png'
-    image: 'https://camo.githubusercontent.com/cad0700fd2c820a742aac6fda7d758a0fd705d5b6360850693349b391203e260/68747470733a2f2f62756c6c646f676a6f622e636f6d2f73797374656d2f7265616461626c65732f636f766572732f3030302f3030312f3435352f6d61785f7265732f382d31302d323031382e706e67'
+    priority: 23,
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrKHvWNCoL5zeLIGS8fRRuemESBUY6YNgtvQ&s'
   },
 ];
 

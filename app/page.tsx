@@ -7,6 +7,7 @@ import CustomCursor from '@/components/CustomCursor';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import About from '@/components/About';
+import GitHubStats from '@/components/GitHubStats';
 import Experience from '@/components/Experience';
 import Skills from '@/components/Skills';
 import Achievements from '@/components/Achievements';
@@ -15,6 +16,7 @@ import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import ParticleBackground from '@/components/ParticleBackground';
 import ScrollProgress from '@/components/ScrollProgress';
+import CornerFire from '@/components/CornerFire';
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -33,8 +35,15 @@ export default function Home() {
 
   return (
     <main className="relative min-h-screen bg-background overflow-x-hidden">
+      {/* Ambient orbs */}
+      <div className="orb orb-1" />
+      <div className="orb orb-2" />
+      <div className="orb orb-3" />
+      <div className="scan-line" />
+
       <CustomCursor />
       <ParticleBackground />
+      <CornerFire />
       <ScrollProgress />
       
       <Navbar />
@@ -46,6 +55,7 @@ export default function Home() {
       >
         <Hero />
         <About />
+        <GitHubStats />
         <Experience />
         <Skills />
         <Achievements />

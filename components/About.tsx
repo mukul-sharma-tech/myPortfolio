@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { GraduationCap, MapPin, Calendar, Star, Trophy, Target } from 'lucide-react';
 import Image from 'next/image';
+import FireRing from '@/components/FireRing';
 
 export default function About() {
   const { ref, inView } = useInView({
@@ -14,9 +15,9 @@ export default function About() {
   const stats = [
     { label: 'CGPA', value: '9.2+', icon: Star },
     { label: 'Branch Rank', value: '14th', icon: Trophy },
-    { label: 'LeetCode', value: '436+', icon: Target },
+    { label: 'LeetCode', value: '534+', icon: Target },
     { label: 'CodeChef', value: '3⭐', icon: Star },
-    { label: 'Codeforces', value: '1081 Rating', icon: Star },
+    { label: 'Codeforces', value: '1052 Rating', icon: Star },
 
   ];
 
@@ -48,8 +49,8 @@ export default function About() {
           >
             <div className="glass-card p-8 text-center">
               <div className="relative w-32 h-32 mx-auto mb-6">
-                <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/20 to-secondary/20 blur-lg" />
-                <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-gradient-to-br from-primary to-secondary shadow-xl">
+                <FireRing size={128} intensity={1} />
+                <div className="relative w-full h-full rounded-full overflow-hidden border-2 border-orange-400/20 shadow-xl">
                   <Image
                     src="/WhatsApp Image 2024-10-06 at 19.04.08_227c3c31.jpg"
                     alt="Mukul Sharma"

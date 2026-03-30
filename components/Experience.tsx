@@ -12,18 +12,18 @@ const experiences = [
     location: 'Delhi, India',
     period: 'September 2025 - Present',
     type: 'Current',
-    description: 'Mentoring Peers on Web3 Technology',
+    description: 'Mentoring junior developers in blockchain fundamentals and Web3 technologies at Google Developer Group.',
     technologies: ['Web3', 'Solidity', 'Smart Contract', 'Rust'],
     color: 'primary'
   },
-   {
-    title: 'SDE Intern',
-    company: 'UIDAI',
+  {
+    title: 'Software Engineer Intern',
+    company: 'UIDAI (Unique Identification Authority of India)',
     location: 'Delhi, India',
     period: 'July 2025 - September 2025',
     type: 'Completed',
-    description: 'Contributing to the UIDAI Aadhaar Portal by building secure full-stack features for enrolment, updates, and authentication, improving APIs, UI, and database integration to enhance user experience and ensure government compliance.',
-    technologies: ['React', 'Next.js', 'Node.js', 'MongoDB', 'Express.js','Typescript','API Testing','Devops'],
+    description: 'Engineered 20+ secure UI components using Zod for schema validation, enforcing strict data controls and government identity security standards. Scaled identity microservices via Prisma to handle 10M+ requests/month, cutting P95 latency by 40% via Redis. Prototyped a GenAI Voice Agent using Python, LLMs, and Speech-to-Text to automate helpline queries.',
+    technologies: ['React', 'Next.js', 'Node.js', 'TypeScript', 'Zod', 'Prisma', 'Redis', 'Python', 'LLMs'],
     color: 'primary'
   },
   {
@@ -32,8 +32,8 @@ const experiences = [
     location: 'Remote',
     period: 'May 2025 - June 2025',
     type: 'Completed',
-    description: 'Contributing to the development of the company\'s travel and tour website and building a separate website for travel agents and booking platforms.',
-    technologies: ['React', 'Next.js', 'Node.js', 'MongoDB', 'Express.js'],
+    description: 'Slashed dashboard load time by 80% by optimizing Firebase queries and architecting cron-based data pipelines. Secured 90% uptime via comprehensive Jest testing suites. Built a Vector RAG engine in Python for the trip planner, enabling natural language search and context-aware itineraries.',
+    technologies: ['React', 'Next.js', 'Node.js', 'Firebase', 'Jest', 'Python', 'RAG', 'Vector Embeddings'],
     link: 'https://desire4travels.com/',
     color: 'primary'
   },
@@ -43,7 +43,7 @@ const experiences = [
     location: 'Delhi',
     period: 'Jan 2025 - Present',
     type: 'Training',
-    description: 'Currently developing an AI-Powered Interactive Learning Assistant for Classrooms as part of Intel Unnati Industrial Training Program.',
+    description: 'Developing an AI-Powered Interactive Learning Assistant for Classrooms as part of Intel Unnati Industrial Training Program.',
     technologies: ['Python', 'TensorFlow', 'OpenCV', 'NLP', 'AI/ML'],
     color: 'secondary'
   },

@@ -1,31 +1,26 @@
 import './globals.css';
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Space_Grotesk } from 'next/font/google';
 import { ThemeProvider } from '@/components/ThemeProvider';
 import { Toaster } from '@/components/ui/sonner';
 
-const inter = Inter({ subsets: ['latin'] });
+const spaceGrotesk = Space_Grotesk({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700'],
+  variable: '--font-space',
+});
 
 export const metadata: Metadata = {
-  title: 'Mukul Sharma - Full Stack Developer & AI/ML Enthusiast',
-  description: 'Personal portfolio of Mukul Sharma - Full Stack Developer, AI/ML Enthusiast, and Computer Science student at MAIT Delhi.',
-  keywords: 'Full Stack Developer, AI ML, React, Next.js, Portfolio, MAIT Delhi, Computer Science',
+  title: 'Mukul Sharma — Full Stack Developer & AI Engineer',
+  description: 'Personal portfolio of Mukul Sharma — Full Stack Developer, AI/ML Engineer, and CS student at MAIT Delhi.',
+  keywords: 'Full Stack Developer, AI ML, React, Next.js, Portfolio, MAIT Delhi',
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          enableSystem={false}
-          disableTransitionOnChange
-        >
+      <body className={`${spaceGrotesk.variable} ${spaceGrotesk.className}`}>
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false} disableTransitionOnChange>
           {children}
           <Toaster />
         </ThemeProvider>

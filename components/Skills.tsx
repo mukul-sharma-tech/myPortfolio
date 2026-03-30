@@ -44,27 +44,25 @@ const skillCategories = [
     ]
   },
   {
-    title: 'Databases & DevOps', // Renamed category for clarity
+    title: 'Databases & DevOps',
     icon: Database,
     color: 'accent',
     skills: [
-      { name: 'Azure', icon: Database }, // Re-ordered
-
-      { name: 'MySQL', icon: Database }, // Re-ordered
-      { name: 'MongoDB', icon: Database }, // Re-ordered
-      { name: 'PostgreSQL', icon: Database }, // Added from resume
+      { name: 'MongoDB', icon: Database },
+      { name: 'CosmosDB', icon: Database },
+      { name: 'MySQL', icon: Database },
+      { name: 'PostgreSQL', icon: Database },
       { name: 'Firebase', icon: Database },
       { name: 'Supabase', icon: Database },
-      { name: 'Prisma', icon: Database }, // Added from resume
-      { name: 'Git/Github', icon: GitBranch }, // Matched resume casing
-      { name: 'Docker', icon: Settings }, // Added from resume
-      { name: 'CI/CD', icon: Settings }, // Added from resume
-      { name: 'Linux', icon: Settings }, // Added from resume
-      { name: 'Jest', icon: Settings }, // Added from resume
-      { name: 'VSCode', icon: Settings },
-      { name: 'Cursor', icon: Settings }, // Added from resume
+      { name: 'Prisma', icon: Database },
+      { name: 'Redis', icon: Database },
+      { name: 'Azure', icon: Cloud },
+      { name: 'Git/Github', icon: GitBranch },
+      { name: 'Docker', icon: Settings },
+      { name: 'CI/CD', icon: Settings },
+      { name: 'Linux', icon: Settings },
+      { name: 'Jest', icon: Settings },
       { name: 'Postman', icon: Settings },
-
     ]
   },
   {
@@ -72,11 +70,15 @@ const skillCategories = [
     icon: Brain,
     color: 'primary',
     skills: [
-      { name: 'ML', icon: Brain }, // Replaced list with resume skills
-      { name: 'OpenAI', icon: Brain }, // Replaced list with resume skills
-      { name: 'LLMs', icon: MessageSquare }, // Replaced list with resume skills
-      { name: 'OpenCV', icon: Brain }, // From EduniteX project
-      { name: 'OpenVINO', icon: Brain }, // From EduniteX project
+      { name: 'Generative AI', icon: Sparkles },
+      { name: 'LLMs', icon: MessageSquare },
+      { name: 'RAG', icon: Brain },
+      { name: 'AI Agents', icon: Bot },
+      { name: 'Semantic Search', icon: Brain },
+      { name: 'Vector Embeddings', icon: Brain },
+      { name: 'Langchain', icon: Brain },
+      { name: 'Computer Vision', icon: Brain },
+      { name: 'OpenCV', icon: Brain },
     ]
   },
   {
@@ -96,12 +98,10 @@ const skillCategories = [
     icon: Bot,
     color: 'accent',
     skills: [
-      // This list seems like specific examples of "Generative AI"
-      // which is on your resume. Leaving as-is.
-      { name: 'Generative AI', icon: Sparkles },
       { name: 'ChatGPT', icon: Bot },
       { name: 'Claude', icon: Bot },
       { name: 'Gemini', icon: Bot },
+      { name: 'Cursor', icon: Settings },
       { name: 'DeepSeek', icon: Bot },
       { name: 'Perplexity', icon: Bot },
     ]

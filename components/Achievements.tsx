@@ -6,11 +6,11 @@ import { Trophy, Medal, Award, Star, Users, Code, Target, Zap } from 'lucide-rea
 
 const achievements = [
   {
-    title: 'LeetCode 435+ Problems',
+    title: 'LeetCode & CodeForces 668+ Problems',
     category: 'Programming',
-    icon: Code, // Assumed icon
+    icon: Code,
     color: 'primary',
-    description: 'Solved 382+ problems on LeetCode (mukul1010).',
+    description: 'Solved 668+ problems across LeetCode and CodeForces platforms.',
     date: 'Ongoing',
     level: 'Global'
   },
@@ -42,30 +42,66 @@ const achievements = [
     level: 'College'
   },
     {
-    title: 'Memory Over Models Hackathon Winner',
+    title: 'McKinsey Forward\'25',
     category: 'Competition',
-    icon: Award, // Assumed icon
-    color: 'secondary',
-    description: 'Under Top 20 Winners.',
+    icon: Award,
+    color: 'primary',
+    description: 'Selected for McKinsey Forward 2025 program.',
     date: '2025',
-    level: 'National' // Assumed level
+    level: 'Global'
+  },
+  {
+    title: 'Winner - Innovative Project Competition',
+    category: 'Competition',
+    icon: Trophy,
+    color: 'secondary',
+    description: 'Won the Innovative Project Competition.',
+    date: '2025',
+    level: 'National'
   },
 
   {
-    title: 'Webvision Winner 2025',
-    category: 'Competition',
-    icon: Award, // Assumed icon
-    color: 'secondary',
-    description: 'Secured first place in the Webvision 2025 competition.',
+    title: 'Memory Over Models Hackathon Winner',
+    category: 'Hackathon',
+    icon: Award,
+    color: 'accent',
+    description: 'Winner at Memory Over Models Hackathon.',
     date: '2025',
-    level: 'Inter-College' // Assumed level
+    level: 'National'
   },
   {
-    title: 'Smart India Hackathon 2025',
+    title: 'Webvision 2025 Winner',
+    category: 'Competition',
+    icon: Award,
+    color: 'secondary',
+    description: 'Secured first place in Webvision 2025.',
+    date: '2025',
+    level: 'Inter-College'
+  },
+  {
+    title: 'NSH - IIT Delhi',
+    category: 'Hackathon',
+    icon: Zap,
+    color: 'primary',
+    description: 'Participated in National Student Hackathon at IIT Delhi.',
+    date: '2025',
+    level: 'National'
+  },
+  {
+    title: 'Google GenAI Exchange Hackathon Semi-Finals',
+    category: 'Hackathon',
+    icon: Trophy,
+    color: 'accent',
+    description: 'Reached semi-finals of Google GenAI Exchange Hackathon 2025.',
+    date: '2025',
+    level: 'National'
+  },
+  {
+    title: 'Smart India Hackathon 2025 - Round 2',
     category: 'Hackathon',
     icon: Code,
-    color: 'accent',
-    description: 'Currently participating in the final rounds of Smart India Hackathon 2025.',
+    color: 'primary',
+    description: 'Advanced to Round 2 of Smart India Hackathon 2025.',
     date: '2025',
     level: 'National'
   },
@@ -73,26 +109,26 @@ const achievements = [
     title: 'Top 8 - CodeSynthesis 2025',
     category: 'Competition',
     icon: Trophy,
-    color: 'primary',
+    color: 'secondary',
     description: 'Ranked in the Top 8 teams at CodeSynthesis 2025.',
     date: '2025',
-    level: 'National' // Assumed level
+    level: 'National'
   },
   {
     title: 'Finalist - DevExpo NSUT 2025',
     category: 'Hackathon',
-    icon: Zap, // Assumed icon
-    color: 'secondary',
-    description: 'Reached the finals of the DevExpo Hackathon at NSUT 2025.',
+    icon: Zap,
+    color: 'accent',
+    description: 'Reached the finals of DevExpo Hackathon at NSUT 2025.',
     date: '2025',
-    level: 'Inter-College' // Assumed level
+    level: 'Inter-College'
   },
   {
     title: 'Finalist - Hackground India 2025',
     category: 'Hackathon',
-    icon: Target, // Assumed icon
-    color: 'accent',
-    description: 'Qualified as a finalist in the Hackground India 2025 hackathon.',
+    icon: Target,
+    color: 'primary',
+    description: 'Qualified as a finalist in Hackground India 2025.',
     date: '2025',
     level: 'National'
   },
@@ -100,37 +136,37 @@ const achievements = [
     title: 'CodeClash 2025 Semi-Finalist',
     category: 'Competition',
     icon: Trophy,
-    color: 'primary',
-    description: 'Reached semi-finals in the prestigious CodeClash 2025 competitive programming contest.',
+    color: 'secondary',
+    description: 'Reached semi-finals in CodeClash 2025 competitive programming contest.',
     date: '2025',
-    level: 'National' // Assumed level
+    level: 'National'
   },
   {
     title: 'SSOC 2025 Contributor',
     category: 'Open Source',
     icon: Code,
-    color: 'secondary',
+    color: 'accent',
     description: 'Contributed to open-source projects during Social Summer of Code 2025.',
     date: '2025',
     level: 'Global'
   },
   {
+    title: 'Intel Unnati Training 2025',
+    category: 'Training',
+    icon: Medal,
+    color: 'primary',
+    description: 'Selected for Intel Unnati Industrial Training 2025.',
+    date: '2025',
+    level: 'National'
+  },
+  {
     title: 'GSSOC 2025 Contributor',
     category: 'Open Source',
     icon: Code,
-    color: 'accent',
+    color: 'secondary',
     description: 'Contributed to open-source projects during GirlScript Summer of Code 2025.',
     date: '2025',
     level: 'Global'
-  },
-  {
-    title: 'Branch Rank 14th (4th Semester)',
-    category: 'Academic',
-    icon: Medal,
-    color: 'primary',
-    description: 'Achieved 14th rank in Computer Science branch with 9.284 CGPA till 4th semester.', // CGPA updated to match resume
-    date: '2025',
-    level: 'College'
   },
   {
     title: 'Class 12th - 7th Rank',
@@ -145,11 +181,9 @@ const achievements = [
 
 const certifications = [
   'Cybersecurity Essentials - CISCO',
-  'Python for Data Science',
-  'Containers Kubernetes OpenShift V2',
-  'Career Essentials in Generative AI - Microsoft & LinkedIn',
-  'Containers & Kubernetes Essentials - IBM',
-  'AWS Knowledge: Cloud Essentials'
+  'AWS Cloud - Amazon Web Services',
+  'Generative AI - Microsoft & LinkedIn',
+  'Python for Data Science - IBM',
 ];
 
 export default function Achievements() {

@@ -341,7 +341,7 @@ export default function Contact() {
             <Button
               size="lg"
               variant="outline"
-              onClick={() => window.open('/resume.pdf', '_blank')}
+              onClick={() => window.open('https://drive.google.com/drive/folders/1926GbTRYaKf08Hbd6aXOZyq0KKL5Vtwd', '_blank')}
               className="border-primary/50 hover:bg-primary/10"
             >
               <ExternalLink className="mr-2 h-5 w-5" />
