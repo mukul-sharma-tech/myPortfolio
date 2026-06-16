@@ -8,6 +8,18 @@ import {
   Smartphone, Cloud, Settings, Zap,
   Bot, MessageSquare, Sparkles
 } from 'lucide-react';
+import { 
+  SiReact, SiNextdotjs, SiNodedotjs, SiExpress, SiPython, 
+  SiHtml5, SiTailwindcss, SiBootstrap, SiMongodb, SiMysql,
+  SiPostgresql, SiFirebase, SiSupabase, SiPrisma, SiRedis,
+  SiDocker, SiLinux, SiJest, SiPostman,
+  SiCplusplus, SiJavascript, SiTypescript, SiRust, SiSolidity,
+  SiC
+} from 'react-icons/si';
+import { FaJava } from 'react-icons/fa';
+import { BsFiletypeSql } from 'react-icons/bs';
+import { TbApi } from 'react-icons/tb';
+import { FaGithub } from 'react-icons/fa';
 
 const skillCategories = [
   {
@@ -15,15 +27,15 @@ const skillCategories = [
     icon: Code,
     color: 'primary',
     skills: [
-      { name: 'C', icon: FileCode },
-      { name: 'C++', icon: FileCode },
-      { name: 'JavaScript', icon: FileCode },
-      { name: 'TypeScript', icon: FileCode },
-      { name: 'Python', icon: FileCode },
-      { name: 'Java', icon: FileCode },
-      { name: 'SQL', icon: FileCode }, // Added from resume
-      { name: 'Rust', icon: FileCode }, // Added from resume
-      { name: 'Solidity', icon: FileCode }, // Added from resume
+      { name: 'C', icon: SiC },
+      { name: 'C++', icon: SiCplusplus },
+      { name: 'JavaScript', icon: SiJavascript },
+      { name: 'TypeScript', icon: SiTypescript },
+      { name: 'Python', icon: SiPython },
+      { name: 'Java', icon: FaJava },
+      { name: 'SQL', icon: BsFiletypeSql },
+      { name: 'Rust', icon: SiRust },
+      { name: 'Solidity', icon: SiSolidity },
     ]
   },
   {
@@ -31,16 +43,16 @@ const skillCategories = [
     icon: Globe,
     color: 'secondary',
     skills: [
-      { name: 'React', icon: Layers },
-      { name: 'Next.js', icon: Layers },
-      { name: 'Node.js', icon: Terminal },
-      { name: 'Express.js', icon: Terminal },
-      { name: 'Python (Flask)', icon: Terminal }, // Matched resume "Python (Flask)"
-      { name: 'React Native', icon: Layers }, // Added from resume
-      { name: 'HTML/CSS', icon: FileCode },
-      { name: 'Tailwind CSS', icon: Layers },
-      { name: 'Bootstrap', icon: Layers },
-      { name: 'REST APIs', icon: Cloud },
+      { name: 'React', icon: SiReact },
+      { name: 'Next.js', icon: SiNextdotjs },
+      { name: 'Node.js', icon: SiNodedotjs },
+      { name: 'Express.js', icon: SiExpress },
+      { name: 'Python (Flask)', icon: SiPython },
+      { name: 'React Native', icon: SiReact },
+      { name: 'HTML/CSS', icon: SiHtml5 },
+      { name: 'Tailwind CSS', icon: SiTailwindcss },
+      { name: 'Bootstrap', icon: SiBootstrap },
+      { name: 'REST APIs', icon: TbApi },
     ]
   },
   {
@@ -48,21 +60,20 @@ const skillCategories = [
     icon: Database,
     color: 'accent',
     skills: [
-      { name: 'MongoDB', icon: Database },
-      { name: 'CosmosDB', icon: Database },
-      { name: 'MySQL', icon: Database },
-      { name: 'PostgreSQL', icon: Database },
-      { name: 'Firebase', icon: Database },
-      { name: 'Supabase', icon: Database },
-      { name: 'Prisma', icon: Database },
-      { name: 'Redis', icon: Database },
+      { name: 'MongoDB', icon: SiMongodb },
+      { name: 'MySQL', icon: SiMysql },
+      { name: 'PostgreSQL', icon: SiPostgresql },
+      { name: 'Firebase', icon: SiFirebase },
+      { name: 'Supabase', icon: SiSupabase },
+      { name: 'Prisma', icon: SiPrisma },
+      { name: 'Redis', icon: SiRedis },
       { name: 'Azure', icon: Cloud },
-      { name: 'Git/Github', icon: GitBranch },
-      { name: 'Docker', icon: Settings },
+      { name: 'Git/Github', icon: FaGithub },
+      { name: 'Docker', icon: SiDocker },
       { name: 'CI/CD', icon: Settings },
-      { name: 'Linux', icon: Settings },
-      { name: 'Jest', icon: Settings },
-      { name: 'Postman', icon: Settings },
+      { name: 'Linux', icon: SiLinux },
+      { name: 'Jest', icon: SiJest },
+      { name: 'Postman', icon: SiPostman },
     ]
   },
   {
@@ -86,11 +97,11 @@ const skillCategories = [
     icon: Cpu,
     color: 'secondary',
     skills: [
-      { name: 'DSA', icon: Cpu }, // Matched resume "DSA"
-      { name: 'System Design', icon: Cpu }, // Matched resume
-      { name: 'OOP', icon: Cpu }, // Matched resume
-      { name: 'Computer Networks', icon: Cpu }, // Added from resume
-      { name: 'DBMS', icon: Database }, // Kept (from resume coursework)
+      { name: 'DSA', icon: Cpu },
+      { name: 'System Design', icon: Cpu },
+      { name: 'OOP', icon: Cpu },
+      { name: 'Computer Networks', icon: Cpu },
+      { name: 'DBMS', icon: Database },
     ]
   },
   {

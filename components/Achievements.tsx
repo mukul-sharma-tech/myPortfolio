@@ -6,42 +6,33 @@ import { Trophy, Medal, Award, Star, Users, Code, Target, Zap } from 'lucide-rea
 
 const achievements = [
   {
-    title: 'LeetCode & CodeForces 668+ Problems',
+    title: 'LeetCode & CodeForces 720+ Problems',
     category: 'Programming',
     icon: Code,
     color: 'primary',
-    description: 'Solved 668+ problems across LeetCode and CodeForces platforms.',
+    description: 'Solved 720+ problems across LeetCode and CodeForces platforms.',
     date: 'Ongoing',
     level: 'Global'
   },
   {
     title: 'CodeChef 3 Star',
     category: 'Programming',
-    icon: Star, // Assumed icon
+    icon: Star,
     color: 'secondary',
-    description: 'Achieved 3 Star (1600+ rating) on CodeChef (mukul1010).',
+    description: 'Achieved 3 Star on CodeChef.',
     date: 'Ongoing',
     level: 'Global'
   },
   {
-    title: 'CodeForces 1081 Rating',
-    category: 'Programming',
-    icon: Trophy, // Assumed icon
+    title: 'TCS CodeVita - Global Rank 1629',
+    category: 'Competition',
+    icon: Trophy,
     color: 'accent',
-    description: 'Pupil rating (1081) on CodeForces (muku0784).',
-    date: 'Ongoing',
+    description: 'Secured Global Rank 1629 in TCS CodeVita.',
+    date: '2025',
     level: 'Global'
   },
   {
-    title: 'Web3 Mentor, GDG MAIT',
-    category: 'Activity',
-    icon: Users, // Assumed icon
-    color: 'primary',
-    description: 'Mentoring students in Web3 technologies for Google Developer Group MAIT.',
-    date: '2025',
-    level: 'College'
-  },
-    {
     title: 'McKinsey Forward\'25',
     category: 'Competition',
     icon: Award,
@@ -51,53 +42,25 @@ const achievements = [
     level: 'Global'
   },
   {
-    title: 'Winner - Innovative Project Competition',
+    title: 'Winner - Webvision & Innovative Project',
     category: 'Competition',
     icon: Trophy,
     color: 'secondary',
-    description: 'Won the Innovative Project Competition.',
-    date: '2025',
-    level: 'National'
-  },
-
-  {
-    title: 'Memory Over Models Hackathon Winner',
-    category: 'Hackathon',
-    icon: Award,
-    color: 'accent',
-    description: 'Winner at Memory Over Models Hackathon.',
+    description: 'Winner at Webvision 2025 and Innovative Project Competition.',
     date: '2025',
     level: 'National'
   },
   {
-    title: 'Webvision 2025 Winner',
-    category: 'Competition',
-    icon: Award,
-    color: 'secondary',
-    description: 'Secured first place in Webvision 2025.',
-    date: '2025',
-    level: 'Inter-College'
-  },
-  {
-    title: 'NSH - IIT Delhi',
-    category: 'Hackathon',
-    icon: Zap,
-    color: 'primary',
-    description: 'Participated in National Student Hackathon at IIT Delhi.',
-    date: '2025',
-    level: 'National'
-  },
-  {
-    title: 'Google GenAI Exchange Hackathon Semi-Finals',
+    title: 'Semi Finalist - Top Hackathons',
     category: 'Hackathon',
     icon: Trophy,
     color: 'accent',
-    description: 'Reached semi-finals of Google GenAI Exchange Hackathon 2025.',
-    date: '2025',
+    description: 'Semi Finalist in ET GenAI 2026, Google GenAI Exchange 2025, and CodeClash 2025.',
+    date: '2025-2026',
     level: 'National'
   },
   {
-    title: 'Smart India Hackathon 2025 - Round 2',
+    title: 'Smart India Hackathon 2025',
     category: 'Hackathon',
     icon: Code,
     color: 'primary',
@@ -106,47 +69,38 @@ const achievements = [
     level: 'National'
   },
   {
-    title: 'Top 8 - CodeSynthesis 2025',
-    category: 'Competition',
-    icon: Trophy,
-    color: 'secondary',
-    description: 'Ranked in the Top 8 teams at CodeSynthesis 2025.',
-    date: '2025',
-    level: 'National'
-  },
-  {
-    title: 'Finalist - DevExpo NSUT 2025',
+    title: 'Finalist - Major Hackathons',
     category: 'Hackathon',
     icon: Zap,
-    color: 'accent',
-    description: 'Reached the finals of DevExpo Hackathon at NSUT 2025.',
-    date: '2025',
-    level: 'Inter-College'
-  },
-  {
-    title: 'Finalist - Hackground India 2025',
-    category: 'Hackathon',
-    icon: Target,
-    color: 'primary',
-    description: 'Qualified as a finalist in Hackground India 2025.',
-    date: '2025',
-    level: 'National'
-  },
-  {
-    title: 'CodeClash 2025 Semi-Finalist',
-    category: 'Competition',
-    icon: Trophy,
     color: 'secondary',
-    description: 'Reached semi-finals in CodeClash 2025 competitive programming contest.',
+    description: 'Finalist (Top 8 CodeSynthesis), Memory Over Models, DevExpo NSUT, Hack Energy 2.0, Hackground India, Hack@BVP 7.0.',
     date: '2025',
     level: 'National'
   },
   {
-    title: 'SSOC 2025 Contributor',
+    title: 'Web3 Mentor, GDG',
+    category: 'Leadership',
+    icon: Users,
+    color: 'primary',
+    description: 'Mentored junior developers in blockchain fundamentals as a Web3 Mentor at Google Developer Group.',
+    date: '2025',
+    level: 'Community'
+  },
+  {
+    title: 'AiiDA for GSOC Proposal',
     category: 'Open Source',
     icon: Code,
     color: 'accent',
-    description: 'Contributed to open-source projects during Social Summer of Code 2025.',
+    description: 'Contributed to AiiDA for Google Summer of Code (GSOC) Proposal.',
+    date: '2025',
+    level: 'Global'
+  },
+  {
+    title: 'SSOC & GSSOC 2025 Contributor',
+    category: 'Open Source',
+    icon: Code,
+    color: 'secondary',
+    description: 'Contributed to open-source projects during Social and GirlScript Summer of Code 2025.',
     date: '2025',
     level: 'Global'
   },
@@ -158,30 +112,12 @@ const achievements = [
     description: 'Selected for Intel Unnati Industrial Training 2025.',
     date: '2025',
     level: 'National'
-  },
-  {
-    title: 'GSSOC 2025 Contributor',
-    category: 'Open Source',
-    icon: Code,
-    color: 'secondary',
-    description: 'Contributed to open-source projects during GirlScript Summer of Code 2025.',
-    date: '2025',
-    level: 'Global'
-  },
-  {
-    title: 'Class 12th - 7th Rank',
-    category: 'Academic',
-    icon: Star,
-    color: 'secondary',
-    description: 'Secured 7th rank in school with 92.6% marks in CBSE Class 12th examination.',
-    date: '2022',
-    level: 'School'
   }
 ];
 
 const certifications = [
+  'Samsung Innovation Campus AI Certification',
   'Cybersecurity Essentials - CISCO',
-  'AWS Cloud - Amazon Web Services',
   'Generative AI - Microsoft & LinkedIn',
   'Python for Data Science - IBM',
 ];

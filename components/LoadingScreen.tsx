@@ -1,99 +1,100 @@
 "use client";
 
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { useEffect, useState } from 'react';
 
-export default function LoadingScreen() {
-  const [progress, setProgress] = useState(0);
-  const [phase, setPhase] = useState(0);
+const messages = [
+  "Miracles are closer than you think.",
+  "Yes, we're leaving money on the table. That's the point.",
+  "They maximize shareholder value. We maximize human value.",
+  "Enjoy the little things.",
+  "Focus is saying no to 1000 good ideas."
+];
 
-  const phases = ['initializing', 'loading assets', 'rendering', 'ready'];
+export default function LoadingScreen() {
+  const [currentIdx, setCurrentIdx] = useState(0);
 
   useEffect(() => {
+    // Show a random quote immediately
+    setCurrentIdx(Math.floor(Math.random() * messages.length));
+
     const interval = setInterval(() => {
-      setProgress(prev => {
-        const next = prev + Math.random() * 3 + 1;
-        if (next >= 100) { clearInterval(interval); return 100; }
-        return next;
+      setCurrentIdx((prev) => {
+        let nextIdx;
+        do {
+          nextIdx = Math.floor(Math.random() * messages.length);
+        } while (nextIdx === prev && messages.length > 1);
+        return nextIdx;
       });
-    }, 40);
+    }, 2000);
+
     return () => clearInterval(interval);
   }, []);
 
-  useEffect(() => {
-    setPhase(Math.min(3, Math.floor(progress / 25)));
-  }, [progress]);
-
   return (
-    <div className="loading-screen">
-      {/* Ambient smoke */}
-      <div className="absolute inset-0 overflow-hidden">
-        {[...Array(4)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute rounded-full"
-            style={{
-              width: 300 + i * 100,
-              height: 300 + i * 100,
-              left: `${10 + i * 20}%`,
-              top: `${20 + i * 15}%`,
-              background: `radial-gradient(circle, rgba(${i % 2 === 0 ? '80,140,220' : '100,70,180'},0.08), transparent 70%)`,
-              filter: 'blur(40px)',
-            }}
-            animate={{ scale: [1, 1.2, 1], opacity: [0.5, 1, 0.5] }}
-            transition={{ duration: 4 + i, repeat: Infinity, delay: i * 0.8 }}
+    <div className="fixed inset-0 z-[100] flex flex-col justify-between items-center overflow-hidden bg-[#3F8B8B] text-white font-sans">
+      {/* Background Gradient */}
+      <div 
+        className="absolute inset-0 z-0 opacity-80"
+        style={{
+          background: `
+            radial-gradient(circle at 50% 45%, rgba(230, 197, 179, 0.35) 0%, rgba(63, 139, 139, 0.8) 30%, transparent 70%),
+            radial-gradient(circle at 35% 35%, rgba(255, 255, 255, 0.15), transparent 45%),
+            radial-gradient(circle at 65% 35%, rgba(230, 197, 179, 0.15), transparent 45%)
+          `,
+          backgroundSize: '100% 100%',
+          backgroundPosition: 'center',
+        }}
+      />
+
+      <div className="flex-1 w-full flex flex-col justify-center items-center z-10">
+        {/* Concentric Rings Container */}
+        <div className="relative w-[120px] h-[120px] flex justify-center items-center mb-10 scale-125 md:scale-150">
+          <div className="absolute w-[8px] h-[8px] bg-white rounded-full shadow-[0_0_10px_rgba(255,255,255,0.8)]"></div>
+          
+          <div className="absolute w-[40px] h-[40px] border-[3px] border-white/20 rounded-full"></div>
+          <div className="absolute w-[65px] h-[65px] border-[3px] border-white/20 rounded-full"></div>
+          <div className="absolute w-[90px] h-[90px] border-[3px] border-white/20 rounded-full"></div>
+          <div className="absolute w-[115px] h-[115px] border-[3px] border-white/20 rounded-full"></div>
+          
+          <motion.div 
+            animate={{ rotate: 360 }}
+            transition={{ repeat: Infinity, duration: 1.8, ease: "linear" }}
+            className="absolute w-[115px] h-[115px] rounded-full border-[3.5px] border-transparent border-b-white"
           />
-        ))}
+        </div>
+
+        {/* Text Content */}
+        <div className="text-center min-h-[110px] flex flex-col items-center drop-shadow-md">
+          <AnimatePresence mode="wait">
+            <motion.h1
+              key={currentIdx}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 0.95 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="text-[1.35rem] font-medium tracking-wide mb-6 max-w-[420px] leading-relaxed px-4"
+            >
+              {messages[currentIdx]}
+            </motion.h1>
+          </AnimatePresence>
+
+          {/* Loading Dots */}
+          <div className="flex justify-center gap-[6px] mt-2">
+            {[0, 1, 2].map((i) => (
+              <motion.div
+                key={i}
+                animate={{ scale: [0.6, 1, 0.6], opacity: [0.4, 1, 0.4] }}
+                transition={{ repeat: Infinity, duration: 1.4, delay: i * -0.16 }}
+                className="w-[6px] h-[6px] bg-white/70 rounded-full"
+              />
+            ))}
+          </div>
+        </div>
       </div>
 
-      <div className="relative flex flex-col items-center space-y-10 z-10">
-        {/* Logo */}
-        <div className="relative">
-          <motion.div
-            className="loading-text text-5xl tracking-widest"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            MS
-          </motion.div>
-          {/* Rotating ring */}
-          <motion.div
-            className="absolute -inset-6 rounded-full border border-sky-400/20"
-            animate={{ rotate: 360 }}
-            transition={{ duration: 4, repeat: Infinity, ease: 'linear' }}
-          />
-          <motion.div
-            className="absolute -inset-10 rounded-full border border-violet-400/10"
-            animate={{ rotate: -360 }}
-            transition={{ duration: 7, repeat: Infinity, ease: 'linear' }}
-          />
-          {/* Glow */}
-          <div className="absolute inset-0 rounded-full bg-sky-400/10 blur-2xl" />
-        </div>
-
-        {/* Progress bar */}
-        <div className="w-56 space-y-3">
-          <div className="h-px bg-white/5 rounded-full overflow-hidden">
-            <motion.div
-              className="h-full rounded-full"
-              style={{
-                background: 'linear-gradient(90deg, #7dd3fc, #a78bfa)',
-                boxShadow: '0 0 8px rgba(125,211,252,0.6)',
-              }}
-              animate={{ width: `${progress}%` }}
-              transition={{ duration: 0.3 }}
-            />
-          </div>
-          <div className="flex justify-between items-center">
-            <span className="mono text-xs text-white/20 tracking-widest uppercase">
-              {phases[phase]}
-            </span>
-            <span className="mono text-xs text-sky-400/60">
-              {Math.floor(progress)}%
-            </span>
-          </div>
-        </div>
+      <div className="z-10 text-[0.85rem] text-white/60 pb-6 font-medium tracking-widest uppercase flex items-center gap-1.5">
+        Mukul Sharma <span className="mx-1">•</span> AI & Full Stack Engineer
       </div>
     </div>
   );

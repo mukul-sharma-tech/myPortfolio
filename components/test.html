@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magica AI Loading Screen</title>
+    <style>
+        /* Base reset and center styling */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #ffffff;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            overflow: hidden;
+            color: #332d38;
+        }
+
+        /* FIXED BACKGROUND GRADIENT PROPERTY */
+        .container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+
+            background:
+                radial-gradient(circle at 50% 45%,
+                    rgba(190, 150, 220, 0.85) 0%,
+                    rgba(210, 195, 245, 0.65) 18%,
+                    rgba(245, 235, 250, 0.35) 38%,
+                    transparent 60%),
+                radial-gradient(circle at 35% 35%,
+                    rgba(255, 130, 220, 0.45),
+                    transparent 45%),
+                radial-gradient(circle at 65% 35%,
+                    rgba(130, 150, 255, 0.45),
+                    transparent 45%);
+
+            background-size: 100% 100%;
+            background-position: center;
+        }
+
+        /* Concentric Rings Container */
+        .ring-loader {
+            position: relative;
+            width: 120px;
+            height: 120px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 40px;
+            transform: scale(1.5);
+
+        }
+
+        /* Common style for all static concentric rings */
+        .ring {
+            position: absolute;
+            border: 3px solid #9b8fa5;
+            border-radius: 50%;
+        }
+
+        .ring-1 {
+            width: 40px;
+            height: 40px;
+        }
+
+        .ring-2 {
+            width: 65px;
+            height: 65px;
+        }
+
+        .ring-3 {
+            width: 90px;
+            height: 90px;
+        }
+
+        /* The outermost ring */
+        .ring-4 {
+            width: 115px;
+            height: 115px;
+        }
+
+        /* Central solid dot */
+        .center-dot {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background-color: #332d38;
+            border-radius: 50%;
+        }
+
+        /* Continuous 'linear' moving arc animation */
+        .animated-indicator {
+            position: absolute;
+            width: 115px;
+            height: 115px;
+            border: 3.5px solid transparent;
+            border-bottom: 3.5px solid #231f26;
+            border-radius: 50%;
+            animation: spin 1.8s linear infinite;
+        }
+
+        /* Smooth rotation animation */
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Typography Styles */
+        .text-content {
+            text-align: center;
+            min-height: 110px;
+            /* Keeps layout stable during text changes */
+        }
+
+        /* Added smooth opacity transitions for the dynamic changes */
+        .headline {
+            font-size: 1.35rem;
+            font-weight: 500;
+            letter-spacing: -0.01em;
+            margin-bottom: 24px;
+            transition: opacity 0.3s ease-in-out;
+            opacity: 0.9;
+
+            max-width: 420px;
+            /* controls line break width */
+            line-height: 1.35;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+
+            white-space: normal;
+            /* allows wrapping */
+            word-wrap: break-word;
+        }
+
+        /* Pulsing loading dots */
+        .loading-dots {
+            display: flex;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        .dot {
+            width: 6px;
+            height: 6px;
+            background-color: #7b7280;
+            border-radius: 50%;
+            animation: pulse 1.4s infinite ease-in-out both;
+        }
+
+        .dot:nth-child(1) {
+            animation-delay: -0.32s;
+        }
+
+        .dot:nth-child(2) {
+            animation-delay: -0.16s;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            80%,
+            100% {
+                transform: scale(0.6);
+                opacity: 0.4;
+            }
+
+            40% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        /* Footer Branding */
+        .footer {
+            font-size: 0.85rem;
+            color: #7b7280;
+            padding-bottom: 24px;
+            font-weight: 400;
+        }
+
+        .footer span {
+            margin: 0 4px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="ring-loader">
+            <div class="center-dot"></div>
+            <div class="ring ring-1"></div>
+            <div class="ring ring-2"></div>
+            <div class="ring ring-3"></div>
+            <div class="ring ring-4"></div>
+            <div class="animated-indicator"></div>
+        </div>
+
+        <div class="text-content">
+            <h1 class="headline" id="dynamic-quote">Miracles are closer than you think ✨</h1>
+            <div class="loading-dots">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        NextFlow <span>•</span> The #1 All-in-One AI Platform
+    </div>
+
+    <script>
+        // Array containing all your target phrases
+        const messages = [
+            "Miracles are closer than you think ✨",
+            "Yes, we're leaving money on the table. That's the point 💵",
+            "They maximize shareholder value. We maximize human value 💹",
+            "Enjoy the little things 🌸",
+            "Focus is saying no to 1000 good ideas 🎯"
+        ];
+
+        const quoteElement = document.getElementById('dynamic-quote');
+        let currentIdx = Math.floor(Math.random() * messages.length);
+
+        // Show a random quote immediately on initial mount
+        quoteElement.innerText = messages[currentIdx];
+
+        // Loop to periodically rotate messages seamlessly every 2 seconds
+        setInterval(() => {
+            // Fade out
+            quoteElement.style.opacity = 0;
+
+            setTimeout(() => {
+                // Pick a new index that isn't the exact same as the current one
+                let nextIdx;
+                do {
+                    nextIdx = Math.floor(Math.random() * messages.length);
+                } while (nextIdx === currentIdx && messages.length > 1);
+
+                currentIdx = nextIdx;
+                quoteElement.innerText = messages[currentIdx];
+
+                // Fade back in
+                quoteElement.style.opacity = 0.9;
+            }, 300); // Wait for fade-out transition to complete before changing text
+
+        }, 2000); // Executes change cycle every 2000ms (2 seconds)
+    </script>
+</body>
+
+</html>

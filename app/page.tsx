@@ -24,7 +24,7 @@ export default function Home() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 3000);
+    }, 4500);
 
     return () => clearTimeout(timer);
   }, []);
@@ -35,19 +35,9 @@ export default function Home() {
 
   return (
     <main className="relative min-h-screen bg-background overflow-x-hidden">
-      {/* Ambient orbs */}
-      <div className="orb orb-1" />
-      <div className="orb orb-2" />
-      <div className="orb orb-3" />
-      <div className="scan-line" />
 
-      <CustomCursor />
-      <ParticleBackground />
-      <CornerFire />
-      <ScrollProgress />
-      
       <Navbar />
-      
+
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

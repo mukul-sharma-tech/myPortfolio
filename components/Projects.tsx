@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useRef, useMemo } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Button } from '@/components/ui/button';
 import {
@@ -14,16 +14,17 @@ import {
   Smartphone,
   Code,
   Zap,
+  Shield,
 } from 'lucide-react';
 import { projects } from './data/projects';
 import type { Project } from './data/projects'; // Importing your Project type
 
-const categories = ['All', 'AI', 'Web', 'Mobile'];
+const categories = ['All', 'Security', 'AI/ML', 'Web', 'Core CS', 'Web3'];
 
 export default function Projects() {
   const { ref, inView } = useInView({ threshold: 0.2, triggerOnce: true });
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
-  const hoveredRef = useRef<number | null>(null);
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   const filteredProjects = useMemo<Project[]>(() => {
     const list =
@@ -82,9 +83,8 @@ export default function Projects() {
       transition={{ duration: 0.6, delay: index * 0.1 }}
       className={`glass-card p-6 group hover:scale-105 transition-all duration-300 ${
         featured ? 'glow border-2 border-primary/30' : 'glow hover:glow-secondary'
-      } h-full flex flex-col`}
-      onMouseEnter={() => (hoveredRef.current = index)}
-      onMouseLeave={() => (hoveredRef.current = null)}
+      } h-full flex flex-col cursor-pointer`}
+      onClick={() => setSelectedProject(project)}
       whileHover={{ y: -5 }}
     >
       <div className="relative overflow-hidden rounded-lg mb-4 aspect-video flex items-center justify-center bg-black">
@@ -93,40 +93,51 @@ export default function Projects() {
           <img
             src={project.image}
             alt={project.title}
-            className="object-cover w-full h-full rounded-lg"
+            className="object-cover w-full h-full rounded-lg group-hover:scale-110 transition-transform duration-500"
           />
         ) : (
           <div className="text-4xl font-bold opacity-20">
-            {project.category === 'AI' ? (
+            {project.category === 'AI/ML' ? (
               <Brain />
+            ) : project.category === 'Security' ? (
+              <Shield />
             ) : project.category === 'Web' ? (
               <Globe />
-            ) : project.category === 'Mobile' ? (
-              <Smartphone />
+            ) : project.category === 'Web3' ? (
+              <Zap />
+            ) : project.category === 'Core CS' ? (
+              <Code />
             ) : (
               <Code />
             )}
           </div>
         )}
-        <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-3">
+        <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center space-y-3">
           <Button
             size="sm"
-            onClick={() => window.open(project.liveUrl, '_blank')}
-            className="glass-card text-xs"
+            onClick={(e) => { e.stopPropagation(); window.open(project.liveUrl, '_blank'); }}
+            className="glass-card text-xs w-32"
             disabled={project.liveUrl === '#'}
           >
-            <ExternalLink className="h-3 w-3 mr-1" />
-            Live
+            <ExternalLink className="h-3 w-3 mr-2" />
+            Live Demo
           </Button>
           <Button
             size="sm"
             variant="outline"
-            onClick={() => window.open(project.githubUrl, '_blank')}
-            className="glass-card border-white/20 text-xs"
+            onClick={(e) => { e.stopPropagation(); window.open(project.githubUrl, '_blank'); }}
+            className="glass-card border-white/20 text-xs w-32"
             disabled={project.githubUrl === '#'}
           >
-            <Github className="h-3 w-3 mr-1" />
-            Code
+            <Github className="h-3 w-3 mr-2" />
+            Source Code
+          </Button>
+          <Button
+            size="sm"
+            onClick={(e) => { e.stopPropagation(); setSelectedProject(project); }}
+            className="bg-primary text-charcoal hover:bg-primary/90 text-xs font-bold w-32"
+          >
+            View Details
           </Button>
         </div>
       </div>
@@ -155,7 +166,7 @@ export default function Projects() {
         </div>
 
         <p className="text-muted-foreground text-sm leading-relaxed line-clamp-3 flex-1">
-          {hoveredRef.current === index ? project.longDescription : project.description}
+          {project.description}
         </p>
 
         <div className="flex flex-wrap gap-1">
@@ -172,28 +183,6 @@ export default function Projects() {
               +{project.technologies.length - 4}
             </span>
           )}
-        </div>
-
-        <div className="flex space-x-2 pt-2">
-          <Button
-            size="sm"
-            onClick={() => window.open(project.liveUrl, '_blank')}
-            className="flex-1 text-xs"
-            disabled={project.liveUrl === '#'}
-          >
-            <ExternalLink className="h-3 w-3 mr-1" />
-            Live Demo
-          </Button>
-          <Button
-            size="sm"
-            variant="outline"
-            onClick={() => window.open(project.githubUrl, '_blank')}
-            className="flex-1 border-primary/50 hover:bg-primary/10 text-xs"
-            disabled={project.githubUrl === '#'}
-          >
-            <Github className="h-3 w-3 mr-1" />
-            GitHub
-          </Button>
         </div>
       </div>
     </motion.div>
@@ -299,6 +288,83 @@ export default function Projects() {
           </div>
         </motion.div>
       </div>
+
+      {/* Project Details Modal */}
+      <AnimatePresence>
+        {selectedProject && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+            {/* Backdrop */}
+            <motion.div 
+              initial={{ opacity: 0 }} 
+              animate={{ opacity: 1 }} 
+              exit={{ opacity: 0 }}
+              onClick={() => setSelectedProject(null)}
+              className="absolute inset-0 bg-black/60 backdrop-blur-sm"
+            />
+            {/* Modal */}
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.95, y: 20 }} 
+              animate={{ opacity: 1, scale: 1, y: 0 }} 
+              exit={{ opacity: 0, scale: 0.95, y: 20 }}
+              className="relative w-full max-w-3xl bg-[#3F8B8B] text-white border border-white/20 rounded-2xl shadow-2xl overflow-hidden glass-card z-10 max-h-[90vh] flex flex-col"
+            >
+              <div className="p-8 overflow-y-auto custom-scrollbar">
+                <div className="flex justify-between items-start mb-6 border-b border-white/10 pb-4">
+                  <div>
+                    <h3 className="text-3xl font-bold mb-2">{selectedProject.title}</h3>
+                    <div className="flex items-center space-x-3">
+                      <span className={`text-xs px-2 py-1 rounded-full ${getComplexityColor(selectedProject.complexity)}`}>
+                        {selectedProject.complexity}
+                      </span>
+                      <span className={`text-xs px-2 py-1 rounded-full ${getStatusColor(selectedProject.status)}`}>
+                        {selectedProject.status}
+                      </span>
+                    </div>
+                  </div>
+                  <button onClick={() => setSelectedProject(null)} className="p-2 bg-white/10 rounded-full hover:bg-white/20 transition-colors">
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>
+                  </button>
+                </div>
+                
+                {/* Tech Stack */}
+                <div className="mb-6">
+                  <h4 className="text-sm text-primary mb-3 font-semibold uppercase tracking-wider">Core Technologies</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {selectedProject.technologies.map((tech, i) => (
+                      <span key={i} className="px-3 py-1 text-sm rounded-md bg-white/10 text-white border border-white/20 shadow-sm">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Description Pointers */}
+                <div className="mb-8">
+                  <h4 className="text-sm text-primary mb-3 font-semibold uppercase tracking-wider">Project Overview</h4>
+                  <div className="space-y-4 text-white/90 text-lg font-light leading-relaxed">
+                    {selectedProject.longDescription.split('\n').map((point, i) => (
+                      <div key={i} className="flex items-start">
+                        <span className="mr-3 text-primary mt-1 text-xl">•</span>
+                        <span>{point.replace(/^•\s*/, '')}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Links */}
+                <div className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4 pt-6 border-t border-white/10">
+                  <Button size="lg" onClick={() => window.open(selectedProject.liveUrl, '_blank')} className="flex-1 bg-primary text-charcoal hover:bg-primary/90 font-bold" disabled={selectedProject.liveUrl === '#'}>
+                    <ExternalLink className="mr-2 w-5 h-5" /> Live Demo
+                  </Button>
+                  <Button size="lg" variant="outline" onClick={() => window.open(selectedProject.githubUrl, '_blank')} className="flex-1 bg-transparent border-white/50 text-white hover:bg-white/10" disabled={selectedProject.githubUrl === '#'}>
+                    <Github className="mr-2 w-5 h-5" /> View Source Code
+                  </Button>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
     </section>
   );
 }

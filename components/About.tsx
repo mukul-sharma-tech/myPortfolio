@@ -3,8 +3,6 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { GraduationCap, MapPin, Calendar, Star, Trophy, Target } from 'lucide-react';
-import Image from 'next/image';
-import FireRing from '@/components/FireRing';
 
 export default function About() {
   const { ref, inView } = useInView({
@@ -13,12 +11,11 @@ export default function About() {
   });
 
   const stats = [
-    { label: 'CGPA', value: '9.2+', icon: Star },
+    { label: 'CGPA', value: '9.26', icon: Star },
     { label: 'Branch Rank', value: '14th', icon: Trophy },
-    { label: 'LeetCode', value: '534+', icon: Target },
+    { label: 'LeetCode', value: '574+', icon: Target },
     { label: 'CodeChef', value: '3⭐', icon: Star },
     { label: 'Codeforces', value: '1052 Rating', icon: Star },
-
   ];
 
   return (
@@ -39,8 +36,9 @@ export default function About() {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left Column - Image and Stats */}
+        <div className="grid lg:grid-cols-2 gap-12 items-start">
+
+          {/* Left Column - Stats Grid */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
@@ -48,27 +46,15 @@ export default function About() {
             className="space-y-8"
           >
             <div className="glass-card p-8 text-center">
-              <div className="relative w-32 h-32 mx-auto mb-6">
-                <FireRing size={128} intensity={1} />
-                <div className="relative w-full h-full rounded-full overflow-hidden border-2 border-orange-400/20 shadow-xl">
-                  <Image
-                    src="/WhatsApp Image 2024-10-06 at 19.04.08_227c3c31.jpg"
-                    alt="Mukul Sharma"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-              </div>
-              <h3 className="text-2xl font-bold mb-2">Mukul Sharma</h3>
-              <p className="text-muted-foreground">Full Stack Developer, Research, Web3 and AI ML Enthusiast</p>
+              <h3 className="text-2xl font-bold mb-2 text-white">Mukul Sharma</h3>
+              <p className="text-white/70">Full Stack Developer, Research, Web3 and AI ML Enthusiast</p>
             </div>
 
-            {/* Stats Grid */}
             <div className="grid grid-cols-2 gap-4">
               {stats.map((stat, index) => (
                 <motion.div
                   key={stat.label}
-                  className="glass-card p-6 text-center glow hover:glow-secondary transition-all duration-300"
+                  className="glass-card p-6 text-center transition-all duration-300"
                   initial={{ opacity: 0, y: 20 }}
                   animate={inView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
@@ -76,7 +62,7 @@ export default function About() {
                 >
                   <stat.icon className="h-8 w-8 text-primary mx-auto mb-2" />
                   <div className="text-2xl font-bold text-primary">{stat.value}</div>
-                  <div className="text-sm text-muted-foreground">{stat.label}</div>
+                  <div className="text-sm text-white/70">{stat.label}</div>
                 </motion.div>
               ))}
             </div>
@@ -90,38 +76,38 @@ export default function About() {
             className="space-y-6"
           >
             <div className="glass-card p-8">
-              <h3 className="text-2xl font-bold mb-4 flex items-center">
+              <h3 className="text-2xl font-bold mb-4 flex items-center text-white">
                 <GraduationCap className="mr-3 h-6 w-6 text-primary" />
                 Education
               </h3>
               <div className="space-y-4">
                 <div className="border-l-2 border-primary/30 pl-4">
-                  <h4 className="font-semibold text-lg">B.Tech Computer Science and Technology</h4>
+                  <h4 className="font-semibold text-lg text-white">B.Tech Computer Science and Technology</h4>
                   <p className="text-primary">Maharaja Agrasen Institute Of Technology, Delhi</p>
-                  <div className="flex items-center space-x-4 text-sm text-muted-foreground mt-2">
+                  <div className="flex items-center space-x-4 text-sm text-white/70 mt-2">
                     <span className="flex items-center">
                       <Calendar className="mr-1 h-4 w-4" />
                       2023 - 2027
                     </span>
                     <span className="flex items-center">
                       <Star className="mr-1 h-4 w-4" />
-                      9.284 CGPA
+                      9.26 CGPA
                     </span>
                   </div>
                 </div>
 
-                <div className="border-l-2 border-secondary/30 pl-4">
-                  <h4 className="font-semibold">Class 12th - CBSE</h4>
-                  <p className="text-secondary">Joseph & Mary Public School, Delhi</p>
-                  <div className="flex items-center space-x-4 text-sm text-muted-foreground mt-2">
+                <div className="border-l-2 border-white/30 pl-4">
+                  <h4 className="font-semibold text-white">Class 12th - CBSE</h4>
+                  <p className="text-white/70">Joseph & Mary Public School, Delhi</p>
+                  <div className="flex items-center space-x-4 text-sm text-white/70 mt-2">
                     <span>92.6% - 7th Rank in School (2022)</span>
                   </div>
                 </div>
 
-                <div className="border-l-2 border-accent/30 pl-4">
-                  <h4 className="font-semibold">Class 10th - CBSE</h4>
-                  <p className="text-accent">Joseph & Mary Public School, Delhi</p>
-                  <div className="flex items-center space-x-4 text-sm text-muted-foreground mt-2">
+                <div className="border-l-2 border-white/30 pl-4">
+                  <h4 className="font-semibold text-white">Class 10th - CBSE</h4>
+                  <p className="text-white/70">Joseph & Mary Public School, Delhi</p>
+                  <div className="flex items-center space-x-4 text-sm text-white/70 mt-2">
                     <span>85.6% (2020)</span>
                   </div>
                 </div>
@@ -129,11 +115,11 @@ export default function About() {
             </div>
 
             <div className="glass-card p-8">
-              <h3 className="text-2xl font-bold mb-4 flex items-center">
-                <Target className="mr-3 h-6 w-6 text-secondary" />
+              <h3 className="text-2xl font-bold mb-4 flex items-center text-white">
+                <Target className="mr-3 h-6 w-6 text-primary" />
                 Goals & Passion
               </h3>
-              <div className="space-y-4 text-muted-foreground">
+              <div className="space-y-4 text-white/70">
                 <p>
                   High-achieving penultimate-year Computer Science undergraduate (9.2+ CGPA). I&apos;m passionate about building secure, innovative technology solutions by applying my expertise in distributed systems, AI/ML, and full-stack development.
                 </p>
@@ -147,18 +133,17 @@ export default function About() {
             </div>
 
             <div className="glass-card p-8">
-              <h3 className="text-2xl font-bold mb-4 flex items-center">
-                <MapPin className="mr-3 h-6 w-6 text-accent" />
+              <h3 className="text-2xl font-bold mb-4 flex items-center text-white">
+                <MapPin className="mr-3 h-6 w-6 text-primary" />
                 Current Focus
               </h3>
-              <div className="space-y-2 text-muted-foreground">
+              <div className="space-y-2 text-white/70">
                 <p>• Serving as Web3 Mentor at Google Developer Group MAIT</p>
-                {/* <p>• Preparing for the GATE 2026 examination</p> */}
                 <p>• Actively solving DSA and CP problems (LeetCode, CodeChef, CodeForces)</p>
                 <p>• Building and contributing to open-source projects</p>
                 <p>• Researching about different topics and ideas.</p>
               </div>
-            </div>         
+            </div>
           </motion.div>
         </div>
       </div>
