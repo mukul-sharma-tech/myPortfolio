@@ -98,13 +98,24 @@ export default function Contact() {
     setIsSubmitting(true);
 
     try {
-      // Simulate form submission (replace with actual EmailJS or form service)
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to send message');
+      }
       
       toast.success('Message sent successfully! I\'ll get back to you soon.');
       setFormData({ name: '', email: '', subject: '', message: '' });
     } catch (error) {
-      toast.error('Failed to send message. Please try again.');
+      toast.error(error instanceof Error ? error.message : 'Failed to send message. Please try again.');
     } finally {
       setIsSubmitting(false);
     }
